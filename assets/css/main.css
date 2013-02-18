@@ -224,12 +224,12 @@ textarea {
 
 
 
-#ascensorBuilding{
+#floors-wrapper{
 	overflow:hidden;
 	height: 400px;
 }
 
-#ascensorBuilding section:first-child article h1{
+#floors-wrapper section:first-child article h1{
 	font-size: 30px;
 }
 
