@@ -1,19 +1,20 @@
-host = "http://msn-rd.com";
+host = "http://msn-rd.com/eservicios/";
 var cnf = {
 	services: {
-		path : host+'/eservicios/json/',
-		menu : host+'/eservicios/json/menu',
-		blog : host+'/eservicios/json/blog/',
-		standars: host+'/json/standards/<categoría>',
-		premiums: host+'/json/premiums/<categoría>',
-		productos: host+'/json/premiums/productos/<nid>',
-		node: host+'/json/node/<nid>'
+		path : host+'json/',
+		menu : host+'json/menu',
+		blog : host+'json/blog/',
+		premiums: host+'json/premiums/',
+		standards: host+'json/standards/',
+		productos: host+'json/premiums/productos/',
+		node: host+'json/node/'
 	},
 	holders:{
 		blogCnt: "blogContent",
-		standardCnt: "stdContent",
-		premiumCnt: "prmContent",
+		stdCnt: "stdContent",
+		prmCnt: "prmContent",
 		nodeCnt: "nodeContent"
 	}
 }
 
+ 
