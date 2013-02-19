@@ -48,6 +48,16 @@ textarea {
     resize: vertical;
 }
 
+.clear{
+	clear:both;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+
 .chromeframe {
     margin: 0.2em 0;
     background: #ccc;
@@ -239,7 +249,7 @@ box-shadow: inset 0 0 0px 5px rgb(0,0,0);
 }
 
 section article{
-
+	height: 307px;
 }
 
 #navigationMap{
@@ -332,3 +342,12 @@ section article{
     position: absolute;
 }
 
+
+
+
+/*BLOG*/
+.blogContent{
+	width: 395px;
+	height: 307px;
+	overflow: hidden;
+}
