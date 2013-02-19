@@ -13,7 +13,7 @@ var cnf = {
 		blogCnt: "blogContent",
 		stdCnt: "stdContent",
 		prmCnt: "prmContent",
-		nodeCnt: "nodeContent"
+		nodeCnt: "#nodeContent",
 	},
 	views:{
 		menuVw: 'application/views/home/menu.html',
@@ -21,8 +21,8 @@ var cnf = {
 		floorVw:'application/views/home/floor.html',
 		blogVw: 'application/views/home/blog.html',
 		stdVw: 'application/views/home/standards.html',
-		prmVw: 'application/views/home/premiums.html'
-		
+		prmVw: 'application/views/home/premiums.html',
+		standardNd: 'application/views/node/standard.html'
 	}
 }
 

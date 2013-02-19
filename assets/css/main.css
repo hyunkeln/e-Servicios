@@ -57,7 +57,9 @@ textarea {
 .right{
 	float: right;
 }
-
+.hide{
+	display: none;
+}
 .chromeframe {
     margin: 0.2em 0;
     background: #ccc;
