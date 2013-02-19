@@ -14,6 +14,15 @@ var cnf = {
 		stdCnt: "stdContent",
 		prmCnt: "prmContent",
 		nodeCnt: "nodeContent"
+	},
+	views:{
+		menuVw: 'application/views/home/menu.html',
+		menuBigVw: 'application/views/home/menubig.html',
+		floorVw:'application/views/home/floor.html',
+		blogVw: 'application/views/home/blog.html',
+		stdVw: 'application/views/home/standards.html',
+		prmVw: 'application/views/home/premiums.html'
+		
 	}
 }
 

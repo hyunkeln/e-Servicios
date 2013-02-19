@@ -2,8 +2,8 @@ var es = {
 	
 	init : function(){
 		$.when( remote.ajax(cnf.services.menu),
-				$.get('application/views/home/menu.html',function(){}, 'html'),
-				$.get('application/views/home/menubig.html',function(){}, 'html')
+				$.get(cnf.views.menuVw,function(){}, 'html'),
+				$.get(cnf.views.menuBigVw,function(){}, 'html')
 		).done(function(menu_node,menu_template,menubig_template){
 				
 				$.tmpl( menu_template[0] , menu_node[0]).appendTo('#navmenu');
@@ -17,7 +17,7 @@ var es = {
 		});
 	},
 	buildAscensor:function(nodes){
-		$.when($.get('application/views/home/floor.html',function(){}, 'html'))
+		$.when($.get(cnf.views.floorVw,function(){}, 'html'))
 		.done(function(floortpl){
 		//console.log(floortpl);
 			var ascNames = "Home";
@@ -50,9 +50,9 @@ var es = {
 	},
 	renderFloor:function(floorName){
 		var floorNameClr = clearString(floorName);
-		es.renderServiceTemplateToHolder(cnf.services.blog+floorName,'application/views/home/blog.html','.floor.'+floorNameClr+" ."+cnf.holders.blogCnt);
-		es.renderServiceTemplateToHolder(cnf.services.standards+floorName,'application/views/home/standards.html','.floor.'+floorNameClr+" ."+cnf.holders.stdCnt);
-		es.renderServiceTemplateToHolder(cnf.services.premiums+floorName,'application/views/home/premiums.html','.floor.'+floorNameClr+" ."+cnf.holders.prmCnt);
+		es.renderServiceTemplateToHolder(cnf.services.blog+floorName,cnf.views.blogVw,'.floor.'+floorNameClr+" ."+cnf.holders.blogCnt);
+		es.renderServiceTemplateToHolder(cnf.services.standards+floorName,cnf.views.stdVw,'.floor.'+floorNameClr+" ."+cnf.holders.stdCnt);
+		es.renderServiceTemplateToHolder(cnf.services.premiums+floorName,cnf.views.prmVw,'.floor.'+floorNameClr+" ."+cnf.holders.prmCnt);
 	},
 	renderServiceTemplateToHolder:function(srv,tpl,holder){
 		$.when(remote.ajax(srv),$.get(tpl,function(){}, 'html'))
