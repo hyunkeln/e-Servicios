@@ -50,14 +50,21 @@ var es = {
 	},
 	renderFloor:function(floorName){
 		var floorNameClr = clearString(floorName);
-		es.renderServiceTemplateToHolder(cnf.services.blog+floorName,cnf.views.blogVw,'.floor.'+floorNameClr+" ."+cnf.holders.blogCnt);
+		es.renderServiceTemplateToHolder(cnf.services.blog+floorName,cnf.views.blogVw,'.floor.'+floorNameClr+" ."+cnf.holders.blogCnt,function(){$('.floor.'+floorNameClr+" ."+cnf.holders.blogCnt).jScrollPane()});
+		es.renderServiceTemplateToHolder(cnf.services.premiums+floorName,cnf.views.prmVw,'.floor.'+floorNameClr+" ."+cnf.holders.prmCnt,function(){
+			if($('.floor.'+floorNameClr+" ."+cnf.holders.prmCnt+" .premiumsWrp").find("div").length==0) {
+				$('.floor.'+floorNameClr+" ."+cnf.holders.prmCnt).remove();
+				$('.floor.'+floorNameClr+" ."+cnf.holders.stdCnt).addClass("only");
+			}
+		}); 
 		es.renderServiceTemplateToHolder(cnf.services.standards+floorName,cnf.views.stdVw,'.floor.'+floorNameClr+" ."+cnf.holders.stdCnt);
-		es.renderServiceTemplateToHolder(cnf.services.premiums+floorName,cnf.views.prmVw,'.floor.'+floorNameClr+" ."+cnf.holders.prmCnt);
+		
 	},
-	renderServiceTemplateToHolder:function(srv,tpl,holder){
+	renderServiceTemplateToHolder:function(srv,tpl,holder,func){
 		$.when(remote.ajax(srv),$.get(tpl,function(){}, 'html'))
 		.done(function(content,tpl){
 			$.tmpl(tpl[0] , content[0]).appendTo(holder);
+			if(typeof func!=="undefined") func();
 		})
 		.fail(function(a,b,c){
 			console.log(a);

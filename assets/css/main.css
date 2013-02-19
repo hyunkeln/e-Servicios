@@ -351,3 +351,14 @@ section article{
 	height: 307px;
 	overflow: hidden;
 }
+.blogContent article{
+	width: 395px;
+	height: 307px;
+	overflow: hidden;
+}
+
+/*Premium*/
+
+.prmContent, .stdContent{
+	width: 716px;
+}
