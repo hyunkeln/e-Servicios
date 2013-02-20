@@ -86,13 +86,45 @@ var es = {
 		
 	},
 	loadStandard:function(nid){
-		es.renderServiceTemplateToHolder(cnf.services.node+nid,cnf.views.standardNd,cnf.holders.nodeCnt,true,function(){
-			$(cnf.holders.nodeCnt).modal();
+		var floorName = $(".nid"+nid).parents("section").attr("name");
+		if(nav.isHomeVisible(floorName))
+			nav.floorToStandard(floorName);
+		es.renderServiceTemplateToHolder(cnf.services.node+nid,cnf.views.standardNd,'.floor.'+clearString(floorName)+" .floorStandards",true,function(){
+			//$(cnf.holders.nodeCnt).modal();
+			console.log("Cargando "+nid);
 		});
 	}
 	
 	
 }
+
+nav = {
+	floorToStandard:function(floorName){
+		$('.floor.'+clearString(floorName)).find(".floorContent").fadeOut().addClass("hide");
+		$('.floor.'+clearString(floorName)).find(".floorStandards").fadeIn().removeClass("hide");
+	},
+	toFloorHome:function(obj){
+		var floorName = $(obj).parents("section").attr("name");
+		$('.floor.'+clearString(floorName)).find(".floorContent").fadeOut().addClass("hide");
+		$('.floor.'+clearString(floorName)).find(".floorHome").fadeIn().removeClass("hide");
+	},
+	isHomeVisible:function(floorName){
+		return !$('.floor.'+clearString(floorName)).find(".floorHome").hasClass("hide");
+	},
+	nextStandard:function(nid,right){
+		console.log(nid);
+		if(typeof right==="undefined") right=true;
+		var objs = $(".nid"+nid).parent().find(".stdObj").each(function(index){
+			if($(this).hasClass("nid"+nid)){
+				if(right) console.log($(this).next().attr("class"));
+				else console.log($(this).prev().attr("class"));
+			}
+		});
+		console.log(objs);
+	}
+}
+
+
 function clearString(str,chars){
 	if(typeof chars==="undefined") chars = "-./";
 	for(var i=0;i<chars.length;i++)

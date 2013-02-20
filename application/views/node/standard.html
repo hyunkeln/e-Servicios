@@ -1,4 +1,8 @@
 {{each items}}
 <h2>${title}</h2>
 <div>${body}</div>
+<br>
+<div onclick="nav.toFloorHome(this);">Back</div>
+<div onclick="nav.nextStandard(${nid});">Next</div>
+<div onclick="nav.nextStandard(${nid},false);">Prev</div>
 {{/each}} 
