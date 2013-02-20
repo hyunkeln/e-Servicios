@@ -60,12 +60,15 @@ var es = {
 		es.renderServiceTemplateToHolder(cnf.services.standards+floorName,cnf.views.stdVw,'.floor.'+floorNameClr+" ."+cnf.holders.stdCnt);
 		
 	},
-	renderServiceTemplateToHolder:function(srv,tpl,holder,emtpy,func){
+	renderServiceTemplateToHolder:function(srv,tpl,holder,empty,func,fadeOut){
 		if(typeof empty==="undefined") empty = false;
+		if(typeof fadeOut==="undefined") fadeOut = false;
+		if(fadeOut) $(holder).hide();
 		$.when(remote.ajax(srv),$.get(tpl,function(){}, 'html'))
 		.done(function(content,tpl){
 			if(empty) $(holder).empty();
 			$.tmpl(tpl[0] , content[0]).appendTo(holder);
+			$(holder).fadeIn();
 			if(typeof func!=="undefined") func();
 		})
 		.fail(function(a,b,c){
@@ -92,7 +95,7 @@ var es = {
 		es.renderServiceTemplateToHolder(cnf.services.node+nid,cnf.views.standardNd,'.floor.'+clearString(floorName)+" .floorStandards",true,function(){
 			//$(cnf.holders.nodeCnt).modal();
 			console.log("Cargando "+nid);
-		});
+		},true);
 	}
 	
 	
@@ -116,8 +119,14 @@ nav = {
 		if(typeof right==="undefined") right=true;
 		var objs = $(".nid"+nid).parent().find(".stdObj").each(function(index){
 			if($(this).hasClass("nid"+nid)){
-				if(right) console.log($(this).next().attr("class"));
-				else console.log($(this).prev().attr("class"));
+				if(right) {
+					if($(".nid"+nid).attr("class")==$(".nid"+nid).parent().find(".stdObj").last().attr("class")) $(".nid"+nid).parent().find(".stdObj").first().click();
+					else $(this).next().click();//console.log($(this).next().attr("class"));
+				}
+				else {
+					if($(".nid"+nid).attr("class")==$(".nid"+nid).parent().find(".stdObj").first().attr("class")) $(".nid"+nid).parent().find(".stdObj").last().click();
+					$(this).prev().click();//console.log($(this).prev().attr("class"));
+				}
 			}
 		});
 		console.log(objs);
