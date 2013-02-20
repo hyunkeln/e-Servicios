@@ -1,0 +1,10 @@
+{{each items}}
+<div class="premiumProduct product${nid}" onclick="es.loadPremiumProduct(${nid});">
+<h2>${title}</h2>
+<div>${body}</div>
+</div>
+<br>
+{{/each}} 
+<div onclick="nav.toFloorHome(this);">Back</div>
+<!-- <div onclick="nav.nextStandard(${nid});">Next</div>
+<div onclick="nav.nextStandard(${nid},false);">Prev</div> -->

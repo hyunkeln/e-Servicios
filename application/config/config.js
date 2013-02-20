@@ -6,7 +6,7 @@ var cnf = {
 		blog : host+'json/blog/',
 		premiums: host+'json/premiums/',
 		standards: host+'json/standards/',
-		productos: host+'json/premiums/productos/',
+		products: host+'json/premiums/productos/',
 		node: host+'json/node/'
 	},
 	holders:{
@@ -22,7 +22,9 @@ var cnf = {
 		blogVw: 'application/views/home/blog.html',
 		stdVw: 'application/views/home/standards.html',
 		prmVw: 'application/views/home/premiums.html',
-		standardNd: 'application/views/node/standard.html'
+		standardNd: 'application/views/node/standard.html',
+		premiumNd: 'application/views/node/premium.html',
+		premiumProductNd: 'application/views/node/premiumProduct.html'
 	}
 }
 

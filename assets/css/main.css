@@ -364,3 +364,10 @@ section article{
 .prmContent, .stdContent{
 	width: 716px;
 }
+
+
+/*Standard*/
+.floorStandards{
+	position:absolute;
+	width: 100%;
+}

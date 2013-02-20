@@ -1,5 +1,5 @@
+var firstLoad = true;
 var es = {
-	
 	init : function(){
 		$.when( remote.ajax(cnf.services.menu),
 				$.get(cnf.views.menuVw,function(){}, 'html'),
@@ -21,6 +21,13 @@ var es = {
 		.done(function(floortpl){
 		//console.log(floortpl);
 			var ascNames = "Home";
+			var hash = "";
+			if(firstLoad)
+				hash = clearString($(location).attr("hash"));	
+			
+			
+			
+			
 			$.tmpl( floortpl , nodes).appendTo('#floors-wrapper');
 			for(var i=0;i<nodes["items"].length;i++){
 				ascNames+=(" | "+nodes["items"][i]["name"]);
@@ -39,6 +46,12 @@ var es = {
 			    Queued:false,
 			    height : 420
 			});
+			
+			
+			if(hash!="" && firstLoad) {
+				$('#navmenu').find("."+hash).click();
+				firstLoad = false;
+			}
 				//ascensor
 			//console.log(ascNames);
 			//}
@@ -69,7 +82,7 @@ var es = {
 			if(empty) $(holder).empty();
 			$.tmpl(tpl[0] , content[0]).appendTo(holder);
 			$(holder).fadeIn();
-			if(typeof func!=="undefined") func();
+			if(typeof func!=="undefined") if(func!=null) func();
 		})
 		.fail(function(a,b,c){
 			console.log(a);
@@ -88,23 +101,48 @@ var es = {
 		}
 		
 	},
-	loadStandard:function(nid){
+	loadStandard:function(nid,dir){
+		if(typeof dir==="undefined") dir=0;
 		var floorName = $(".nid"+nid).parents("section").attr("name");
+		var holder  = '.floor.'+clearString(floorName)+" .floorStandards";
+		var width = $(holder).outerWidth();
+		if(dir==-1) 
+			$(holder).animate({left:width});
+		else if(dir==1)
+			$(holder).animate({left:-width});		
 		if(nav.isHomeVisible(floorName))
 			nav.floorToStandard(floorName);
-		es.renderServiceTemplateToHolder(cnf.services.node+nid,cnf.views.standardNd,'.floor.'+clearString(floorName)+" .floorStandards",true,function(){
-			//$(cnf.holders.nodeCnt).modal();
-			console.log("Cargando "+nid);
-		},true);
+		es.renderServiceTemplateToHolder(cnf.services.node+nid,cnf.views.standardNd,holder,true,function(){
+			$(holder).animate({
+				left:-1*parseInt($(holder).css("left"))},
+				{duration:1,
+				complete:function(){
+					$(holder).animate({left:0});
+				}
+			});
+		},dir==0);
+	},
+	loadPremium:function(nid){
+		var floorName = $(".nid"+nid).parents("section").attr("name");
+		var holder  = '.floor.'+clearString(floorName)+" .floorPremiums";
+		if(nav.isHomeVisible(floorName))
+			nav.floorToPremium(floorName);
+		es.renderServiceTemplateToHolder(cnf.services.products+nid,cnf.views.premiumNd,holder,true,null,true);
+	}, 
+	loadPremiumProduct:function(nid){
+		var holder = "#nodeContent";
+		es.renderServiceTemplateToHolder(cnf.services.node+nid,cnf.views.premiumProductNd,holder,true,function(){
+			$(holder).modal();
+		});
 	}
-	
-	
 }
 
 nav = {
 	floorToStandard:function(floorName){
-		$('.floor.'+clearString(floorName)).find(".floorContent").fadeOut().addClass("hide");
-		$('.floor.'+clearString(floorName)).find(".floorStandards").fadeIn().removeClass("hide");
+		nav.floorTo(floorName,".floorStandards");
+	},
+	floorToPremium:function(floorName){
+		nav.floorTo(floorName,".floorPremiums");
 	},
 	toFloorHome:function(obj){
 		var floorName = $(obj).parents("section").attr("name");
@@ -115,27 +153,34 @@ nav = {
 		return !$('.floor.'+clearString(floorName)).find(".floorHome").hasClass("hide");
 	},
 	nextStandard:function(nid,right){
-		console.log(nid);
+		//console.log(nid);
 		if(typeof right==="undefined") right=true;
 		var objs = $(".nid"+nid).parent().find(".stdObj").each(function(index){
 			if($(this).hasClass("nid"+nid)){
 				if(right) {
-					if($(".nid"+nid).attr("class")==$(".nid"+nid).parent().find(".stdObj").last().attr("class")) $(".nid"+nid).parent().find(".stdObj").first().click();
-					else $(this).next().click();//console.log($(this).next().attr("class"));
+					if($(".nid"+nid).attr("class")==$(".nid"+nid).parent().find(".stdObj").last().attr("class")) click = $(".nid"+nid).parent().find(".stdObj").first().attr("onclick");
+					else click = $(this).next().attr("onclick");//
+					click = click.replace(")",",1)");  //setear la dirección de la carga
 				}
 				else {
-					if($(".nid"+nid).attr("class")==$(".nid"+nid).parent().find(".stdObj").first().attr("class")) $(".nid"+nid).parent().find(".stdObj").last().click();
-					$(this).prev().click();//console.log($(this).prev().attr("class"));
+					if($(".nid"+nid).attr("class")==$(".nid"+nid).parent().find(".stdObj").first().attr("class")) click = $(".nid"+nid).parent().find(".stdObj").last().attr("onclick");
+					else click = $(this).prev().attr("onclick");//console.log($(this).prev().attr("class"));
+					click = click.replace(")",",-1)");
 				}
+				eval(click);
 			}
 		});
-		console.log(objs);
-	}
+		//console.log(objs);
+	}, 
+	floorTo:function(floorName,container){
+		$('.floor.'+clearString(floorName)).find(".floorContent").fadeOut().addClass("hide");
+		$('.floor.'+clearString(floorName)).find(container).fadeIn().removeClass("hide");
+	},
 }
 
 
 function clearString(str,chars){
-	if(typeof chars==="undefined") chars = "-./";
+	if(typeof chars==="undefined") chars = "-./#";
 	for(var i=0;i<chars.length;i++)
 		str= str.replace(chars[i],"");
 	return str;
