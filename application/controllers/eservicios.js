@@ -8,27 +8,43 @@ var es = {
 				
 				$.tmpl( menu_template[0] , menu_node[0]).appendTo('#navmenu');
 				$.tmpl( menubig_template[0] , menu_node[0]).appendTo('#floors-wrapper');
+				
 				es.buildAscensor(menu_node[0]);
+
+				
+				
 				
 		}).fail(function(a,b,c){
 			console.log(a);
 			console.log(b);
 			console.log(c);
 		});
+	}, 
+	buildParallax:function(tpl,nodes){
+		for(var i=0;i<nodes.length;i++){
+			console.log("section."+clearString(nodes[i].name));
+			$.tmpl(tpl,nodes[i]).prependTo("section."+clearString(nodes[i].name));
+			//console.log($("section."+clearString(nodes[i].name)).html());
+		}
+		$('.parallaxWrapper .parallax-layer').parallax({
+				mouseport: $('.parallaxWrapper').parents("section")
+			},{}, {xparallax: '200px'});
+		//
 	},
 	buildAscensor:function(nodes){
-		$.when($.get(cnf.views.floorVw,function(){}, 'html'))
-		.done(function(floortpl){
-		//console.log(floortpl);
+		$.when( $.get(cnf.views.floorVw,function(){}, 'html'),
+			 	$.get(cnf.views.parallaxVw,function(){}, 'html'))
+		.done(function(floortpl,parallaxtpl){
+		//console.log(parallaxtpl);
 			var ascNames = "Home";
 			var hash = "";
 			if(firstLoad)
 				hash = clearString($(location).attr("hash"));	
 			
+			$.tmpl( floortpl[0], nodes).appendTo('#floors-wrapper');
+			 
+			es.buildParallax(parallaxtpl[0] , nodes.items);
 			
-			
-			
-			$.tmpl( floortpl , nodes).appendTo('#floors-wrapper');
 			for(var i=0;i<nodes["items"].length;i++){
 				ascNames+=(" | "+nodes["items"][i]["name"]);
 				//es.renderFloor(nodes["items"][i]["name"]);
@@ -46,12 +62,15 @@ var es = {
 			    Queued:false,
 			    height : 420
 			});
-			
+			$("#ascensorFloor1").backstretch(cnf.images.homeBackground);
+			for(var i=0;i<nodes["items"].length;i++)
+				$("#ascensorFloor"+(i+2)).backstretch(nodes["items"][i]["background"][0]);
 			
 			if(hash!="" && firstLoad) {
 				$('#navmenu').find("."+hash).click();
 				firstLoad = false;
 			}
+			
 				//ascensor
 			//console.log(ascNames);
 			//}
@@ -63,7 +82,12 @@ var es = {
 	},
 	renderFloor:function(floorName){
 		var floorNameClr = clearString(floorName);
-		es.renderServiceTemplateToHolder(cnf.services.blog+floorName,cnf.views.blogVw,'.floor.'+floorNameClr+" ."+cnf.holders.blogCnt,false,function(){$('.floor.'+floorNameClr+" ."+cnf.holders.blogCnt).jScrollPane()});
+		es.renderServiceTemplateToHolder(cnf.services.blog+floorName,cnf.views.blogVw,'.floor.'+floorNameClr+" ."+cnf.holders.blogCnt,false,function(){
+			
+			$('.floor.'+floorNameClr+" ."+cnf.holders.blogCnt+" .blogBody").jScrollPane();
+			$('.floor.'+floorNameClr+" ."+cnf.holders.blogCnt).jcarousel();
+		});
+		
 		es.renderServiceTemplateToHolder(cnf.services.premiums+floorName,cnf.views.prmVw,'.floor.'+floorNameClr+" ."+cnf.holders.prmCnt,false,function(){
 			if($('.floor.'+floorNameClr+" ."+cnf.holders.prmCnt+" .premiumsWrp").find("div").length==0) { //Definido en premiums.html
 				$('.floor.'+floorNameClr+" ."+cnf.holders.prmCnt).remove();

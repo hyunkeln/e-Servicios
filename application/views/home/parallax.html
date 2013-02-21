@@ -1,0 +1,7 @@
+<div class="clear parallaxWrapper">
+	{{each(i,p) parallax}}
+	   <div class="parallax-layer" style="width:${p.width}px; height:${p.height}px;">
+	        <img src="${p.url}" />
+	   </div>
+	{{/each}}
+</div>

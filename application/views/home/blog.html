@@ -1,6 +1,12 @@
+<ul>
 {{each items}}
+             <li>
              <article class="nid${nid}">
              	<h1>Blog ${title}.</h1>
-             	<span>${body}</span> 
+             	<div class="blogBody">
+	             	<div>${body}</div> 
+             	</div> 
              </article>
+             </li>
 {{/each}} 
+</ul>

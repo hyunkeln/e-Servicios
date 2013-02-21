@@ -18,6 +18,7 @@ var cnf = {
 	views:{
 		menuVw: 'application/views/home/menu.html',
 		menuBigVw: 'application/views/home/menubig.html',
+		parallaxVw: 'application/views/home/parallax.html',
 		floorVw:'application/views/home/floor.html',
 		blogVw: 'application/views/home/blog.html',
 		stdVw: 'application/views/home/standards.html',
@@ -25,6 +26,9 @@ var cnf = {
 		standardNd: 'application/views/node/standard.html',
 		premiumNd: 'application/views/node/premium.html',
 		premiumProductNd: 'application/views/node/premiumProduct.html'
+	},
+	images:{
+		homeBackground:"http://dl.dropbox.com/u/515046/www/garfield-interior.jpg"
 	}
 }
 
