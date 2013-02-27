@@ -28,9 +28,9 @@ $('#ascensorBuilding').ascensor({
 
 */
  
- 
 $(function() {
 		es.init();
+		
 });
 
 

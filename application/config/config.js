@@ -28,7 +28,7 @@ var cnf = {
 		premiumProductNd: 'application/views/node/premiumProduct.html'
 	},
 	images:{
-		homeBackground:"http://dl.dropbox.com/u/515046/www/garfield-interior.jpg"
+		homeBackground:"assets/images/back_complto_01.jpg"
 	}
 }
 
