@@ -11,7 +11,7 @@ var es = {
 				$.tmpl( menubig_template[0] , menu_node[0]).appendTo('#floors-wrapper');
 				
 				es.buildAscensor(menu_node[0]);
-
+				es.buildHomeParallax();
 				
 				
 				
@@ -21,9 +21,15 @@ var es = {
 			console.log(c);
 		});
 	}, 
+	buildHomeParallax:function(){
+		$('section.menu .parallaxWrapper .parallax-layer').parallax({
+				mouseport: $("section.menu")
+			},{}, {xparallax: '100px'});
+
+	},
 	buildParallax:function(tpl,nodes){
 		for(var i=0;i<nodes.length;i++){
-			console.log("section."+clearString(nodes[i].name));
+			//console.log("section."+clearString(nodes[i].name));
 			$.tmpl(tpl,nodes[i]).prependTo("section."+clearString(nodes[i].name));
 			$("section."+clearString(nodes[i].name)+' .parallaxWrapper .parallax-layer').parallax({
 				mouseport: $("section."+clearString(nodes[i].name))
