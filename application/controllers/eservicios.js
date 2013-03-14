@@ -6,6 +6,7 @@ var es = {
 				$.get(cnf.views.menuBigVw,function(){}, 'html')
 		).done(function(menu_node,menu_template,menubig_template){
 				
+				nav.setVisible(false);
 				$.tmpl( menu_template[0] , menu_node[0]).appendTo('#navmenu');
 				$.tmpl( menubig_template[0] , menu_node[0]).appendTo('#floors-wrapper');
 				
@@ -108,13 +109,13 @@ var es = {
 	},
 	menuChange:function(item){
 		if(!$(item).hasClass("ascensorLink1")){
-			var floorName = $(item).text();
+			var floorName = $(item).attr("name");
 			if($('.floor.'+clearString(floorName)).find("."+cnf.holders.blogCnt).html()==""){ 
 				$('.floor.'+clearString(floorName)).find("."+cnf.holders.blogCnt).html("&nbsp;");
 				es.renderFloor(floorName);
-			}
-			
+			}	
 		}
+		nav.setVisible(!$(item).hasClass("ascensorLink1"));		
 		
 	},
 	loadStandard:function(nid,dir){
@@ -192,6 +193,15 @@ nav = {
 		$('.floor.'+clearString(floorName)).find(".floorContent").fadeOut().addClass("hide");
 		$('.floor.'+clearString(floorName)).find(container).fadeIn().removeClass("hide");
 	},
+	setVisible:function(visible){
+		if(!visible){
+			$("nav").fadeOut();
+			$("#remate").fadeOut();
+		}else{
+			$("nav").fadeIn();
+			$("#remate").fadeIn();
+		}
+	}
 }
 
 
@@ -201,3 +211,4 @@ function clearString(str,chars){
 		str= str.replace(chars[i],"");
 	return str;
 };
+ 

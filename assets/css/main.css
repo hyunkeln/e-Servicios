@@ -315,6 +315,41 @@ section.menu .ascensorLink .span, section.menu .ascensorLink h2{
 	width: 440px;
 }
 
+#menu-top {
+    background: url("../images/remates.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 58px;
+    margin: 0 auto;
+    padding: 0 60px;
+    width: 605px;
+}
+#menu-top li {
+    background: none repeat scroll 0 0 #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    height: 58px;
+    list-style: none outside none;
+    text-indent: -1e+8px;
+    width: 150px;
+}
+#menu-top li.home{
+    background: url("../images/navii.png") no-repeat scroll 0 0 transparent;
+}
+#menu-top li.eBanca:hover, #menu-top li.eBanca.ascensorLinkActive {
+    background: url("../images/navii.png") no-repeat scroll -243px -282px transparent;
+}
+#menu-top li.eBanca {
+    background: url("../images/navii.png") no-repeat scroll 0 -282px transparent;
+}
+#menu-top li.eGobierno {
+    background: url("../images/navii.png") no-repeat scroll 0 -141px transparent;
+}
+#menu-top li.eShopping {
+    background: url("../images/navii.png") no-repeat scroll 0 -423px transparent;
+}
+
+
 .section-wrapper {
     margin: auto;
     width: 565px;

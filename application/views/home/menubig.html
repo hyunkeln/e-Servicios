@@ -5,7 +5,7 @@
 		    <h1>e-Servicios</h1>
 		    <div class="menu-big-wrapper">
 			{{each(i,item) items}}
-			             <div class="ascensorLink ascensorLink${i+2} ${clearString(item.name)}">
+			             <div name="${item.name}" onclick="es.menuChange(this);" class="ascensorLink ascensorLink${i+2} ${clearString(item.name)}">
 			             	<div class="wrapper">
 				             	<h2><em>${item.name}.</em></h2>
 				             	<div class="span">${item.description}</div> 
