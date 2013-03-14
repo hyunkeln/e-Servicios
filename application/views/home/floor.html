@@ -1,15 +1,17 @@
 {{each items}}
 <section  class="floor ${clearString(name)}" name='${name}'>
-	<div class="floorHome floorContent">
-    	<div><h1>Piso.</h1><span>${descr}</span> </div>
-    	<div class="left ${cnf.holders.blogCnt}"></div>
-    	<div class="left ${cnf.holders.prmCnt}"></div>
-    	<div class="left ${cnf.holders.stdCnt}"></div>
-    	<div class="clear"></div>
-    </div>
-    <div class="floorStandards floorContent hide">
-    </div>
-    <div class="floorPremiums floorContent hide">
+	<div class="section-wrapper"> 
+		<div class="floorHome floorContent">
+	    	<div><h1>Piso.</h1><span>${descr}</span> </div>
+	    	<div class="left ${cnf.holders.blogCnt}"></div>
+	    	<div class="left ${cnf.holders.prmCnt}"></div>
+	    	<div class="left ${cnf.holders.stdCnt}"></div>
+	    	<div class="clear"></div>
+	    </div>
+	    <div class="floorStandards floorContent hide">
+	    </div>
+	    <div class="floorPremiums floorContent hide">
+	    </div>
     </div>
 </section>
 {{/each}}

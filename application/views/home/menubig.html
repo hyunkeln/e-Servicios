@@ -1,8 +1,18 @@
 <section class="floor menu">
-{{each(i,item) items}}
-             <em class="ascensorLink ascensorLink${i+2} ${clearString(item.name)}">
-             	<h1>${item.name}.</h1>
-             	<span>${item.descr}</span> 
-             </em>
-{{/each}}
+	<div class="section-back">
+		<div class="section-wrapper">
+			<h4>Bienvenido</h4>
+		    <h1>e-Servicios</h1>
+		    <div class="menu-big-wrapper">
+			{{each(i,item) items}}
+			             <div class="ascensorLink ascensorLink${i+2} ${clearString(item.name)}">
+			             	<div class="wrapper">
+				             	<h2><em>${item.name}.</em></h2>
+				             	<div class="span">${item.description}</div> 
+			             	</div>
+			             </div>
+			{{/each}}
+			</div>
+		</div>
+	</div>
 </section>

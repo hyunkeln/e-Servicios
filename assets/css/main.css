@@ -1,6 +1,10 @@
 /* ==========================================================================
    HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
    ========================================================================== */
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Lato:100); 
+
 
 html,
 button,
@@ -234,6 +238,87 @@ textarea {
     }
 }
 
+/*Menu*/
+
+
+header{
+	z-index: 1;
+}
+
+
+section.menu h4, section.menu h1{
+	 color: #FFFFFF;
+    font-family: Lato,Times,serif;
+    font-size: 70px;
+    font-weight: normal;
+    letter-spacing: -0.025em;
+    line-height: 100%;
+    text-shadow: 0 1px 1px black;
+    margin: 0;
+}
+section.menu h1{
+    font-size: 60px;
+    letter-spacing: -2px;
+    line-height: 75%;
+    margin-bottom: 30px;
+    opacity: 0.4;
+}
+section.menu .ascensorLink:hover, section.menu .ascensorLink.eBanca:hover, section.menu .ascensorLink.eGobierno:hover{
+	background-color: #2C3742;
+}
+section.menu .section-back{
+	background: url("../images/home_lamp.png") no-repeat center top;
+	padding-top: 126px;
+}
+
+section.menu .section-wrapper{
+	
+}
+section.menu .ascensorLink{
+	 border-bottom: thin dotted white;
+    color: #DBE4EA;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    height: 74px;
+    margin-bottom: 3px;
+    /*padding-bottom: 42px;*/
+    padding-top: 10px;
+    width: 565px;
+    font-style: normal;
+    background: url("../images/iconoShop.png") no-repeat left center;
+    background-position-y: -3px;
+}
+
+section.menu .ascensorLink.eBanca{
+	background: url("../images/iconoBanca.png") no-repeat left center;	
+}
+
+section.menu .ascensorLink.eGobierno{
+	background: url("../images/iconoGobierno.png") no-repeat left center;	
+}
+section.menu .ascensorLink .wrapper{
+	background: url("../images/flecha.png") no-repeat right center;	
+}
+section.menu .ascensorLink h2{
+	color: #FFFFFF;
+    font-family: Lato,Times,serif;
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0px;
+}
+section.menu .ascensorLink h2 em{
+	font-style: normal;
+}
+section.menu .ascensorLink .span, section.menu .ascensorLink h2{
+	margin-left: 70px;
+	width: 440px;
+}
+
+.section-wrapper {
+    margin: auto;
+    width: 565px;
+}
 
 
 #floors-wrapper{
@@ -388,3 +473,5 @@ section article{
 	position:absolute;
 	width: 100%;
 }
+
+

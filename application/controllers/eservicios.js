@@ -56,7 +56,7 @@ var es = {
 			    Easing:'easeInOutExpo',
 			    KeyNavigation:false,
 			    Queued:false,
-			    height : 420
+			    height : 561
 			});
 			$("#ascensorFloor1").backstretch(cnf.images.homeBackground);
 			for(var i=0;i<nodes["items"].length;i++)
