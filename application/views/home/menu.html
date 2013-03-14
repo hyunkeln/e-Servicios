@@ -1,6 +1,6 @@
 <ul id="menu-top">
-	<li onclick="es.menuChange(this);" class="home ascensorLink ascensorLink1">e-Servicios. </li>
+	<li onclick="es.menuChange(this);" name="home" class="ascensorLink ascensorLink1 home">Home</li>
 	{{each(i,item) items}}
-	<li onclick="es.menuChange(this);" class="ascensorLink ascensorLink${i+2} ${clearString(item.name)} ">${item.name}</li>
+	<li onclick="es.menuChange(this);" name="${item.name}" class="ascensorLink ascensorLink${i+2} ${clearString(item.name)} ">${item.name}</li>
 	{{/each}}
 </ul>

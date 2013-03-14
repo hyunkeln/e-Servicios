@@ -110,6 +110,7 @@ var es = {
 	menuChange:function(item){
 		if(!$(item).hasClass("ascensorLink1")){
 			var floorName = $(item).attr("name");
+
 			if($('.floor.'+clearString(floorName)).find("."+cnf.holders.blogCnt).html()==""){ 
 				$('.floor.'+clearString(floorName)).find("."+cnf.holders.blogCnt).html("&nbsp;");
 				es.renderFloor(floorName);

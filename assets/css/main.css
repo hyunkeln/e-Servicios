@@ -325,13 +325,14 @@ section.menu .ascensorLink .span, section.menu .ascensorLink h2{
 }
 #menu-top li {
     background: none repeat scroll 0 0 #000000;
-    color: #FFFFFF;
+    color: transparent;
     cursor: pointer;
     float: left;
     height: 58px;
     list-style: none outside none;
     text-indent: -1e+8px;
     width: 150px;
+    
 }
 #menu-top li.home{
     background: url("../images/navii.png") no-repeat scroll 0 0 transparent;
@@ -348,7 +349,16 @@ section.menu .ascensorLink .span, section.menu .ascensorLink h2{
 #menu-top li.eShopping {
     background: url("../images/navii.png") no-repeat scroll 0 -423px transparent;
 }
-
+nav{
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	z-index: 11;
+	display: none;
+}
+#navmenu{
+	margin: auto;
+}
 
 .section-wrapper {
     margin: auto;
