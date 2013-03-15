@@ -62,7 +62,6 @@
 	/*background: #dde;*/
 	background:url(../images/line_scroll.png) transparent repeat-y top center;
 	position: relative;
-	width:10px;
 }
 
 .jspDrag
