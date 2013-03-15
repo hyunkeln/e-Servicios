@@ -28,6 +28,7 @@ var es = {
 
 	},
 	buildParallax:function(tpl,nodes){
+		return 0;
 		for(var i=0;i<nodes.length;i++){
 			//console.log("section."+clearString(nodes[i].name));
 			$.tmpl(tpl,nodes[i]).prependTo("section."+clearString(nodes[i].name));
@@ -84,7 +85,8 @@ var es = {
 		es.renderServiceTemplateToHolder(cnf.services.blog+floorName,cnf.views.blogVw,'.floor.'+floorNameClr+" ."+cnf.holders.blogCnt,false,function(){
 			
 			$('.floor.'+floorNameClr+" ."+cnf.holders.blogCnt+" .blogBody").jScrollPane();
-			$('.floor.'+floorNameClr+" ."+cnf.holders.blogCnt+" ul").jcarousel();
+			if(!$('.floor.'+floorNameClr+" ."+cnf.holders.blogCnt+" ul").hasClass("blog-items0")) 
+				$('.floor.'+floorNameClr+" ."+cnf.holders.blogCnt+" ul").jcarousel(); 
 		});
 		
 		es.renderServiceTemplateToHolder(cnf.services.premiums+floorName,cnf.views.prmVw,'.floor.'+floorNameClr+" ."+cnf.holders.prmCnt,false,function(){
