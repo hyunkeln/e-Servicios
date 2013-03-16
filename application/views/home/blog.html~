@@ -4,7 +4,7 @@
              <article class="nid${nid}">
              	<h1>Blog ${title}.</h1>
              	<div class="blogBody">
-	             	<div>${body}</div> 
+	             	<p>${body}</p> 
              	</div> 
              </article>
              </li>
