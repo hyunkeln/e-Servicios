@@ -1,19 +1,22 @@
-<div class="back">
+
 <ul>
 
 {{each items}}
 
-             <li>
+             <li class="back">
+	
+	<dvi class="posted">
              <article class="nid${nid}">
              	<h1>Blog ${title}.</h1>
              	<div class="blogBody">
 	             	<p>${body}</p> 
              	</div> 
              </article>
-
+	</div>
+<!--<div class="back"></div>-->
              </li>
 
 {{/each}} 
 
 </ul>
-</div>
+

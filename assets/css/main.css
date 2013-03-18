@@ -514,6 +514,13 @@ element.style {
 	background:url(../images/missing_article.png) transparent;
 }
 
+.posted{
+	position:relative;
+	margin:0;
+	height:auto;
+	width:395px;
+}
+
 /*BLOG*/
 .blogContent{
 	width: 385px;
