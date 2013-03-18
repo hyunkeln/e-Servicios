@@ -373,7 +373,7 @@ nav{
 
 .section-wrapper {
     margin: auto;
-    width: 565px;
+    width: 800px;
 }
 
 
@@ -528,7 +528,6 @@ element.style {
 	overflow: hidden;
 	background:url(../images/back_box_slide.png) transparent;
 	border:5px solid white;
-	float:left;
 }
 
 .blogContent h1{
@@ -580,12 +579,23 @@ element.style {
 }
 
 
-/*Premium*/
+/*STD Content Right Content*/
+.stdContent{
+	width: 385px;
+	height: 307px;
+	overflow: hidden;
+	background:url(../images/back_box_slide.png) transparent;
+	border:5px solid white;
+	margin-left:10px;
+}
 
+/*Premium*/
+/*
 .prmContent, .stdContent{
 	width: 716px;
 	position: relative;
 }
+*/
 .floorContent{
 	position: relative;
 }
