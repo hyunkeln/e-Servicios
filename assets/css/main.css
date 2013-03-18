@@ -373,7 +373,7 @@ nav{
 
 .section-wrapper {
     margin: auto;
-    width: 800px;
+    width: 810px;
 }
 
 
@@ -581,12 +581,57 @@ element.style {
 
 /*STD Content Right Content*/
 .stdContent{
-	width: 385px;
+	width: 395px;
 	height: 307px;
 	overflow: hidden;
 	background:url(../images/back_box_slide.png) transparent;
 	border:5px solid white;
 	margin-left:10px;
+}
+
+.stdbj ul{
+	list-style:none;
+	width: 120px;
+	overflow: hidden;
+}
+
+.stdObj{
+	width:120px;
+	font-size:14px;
+	padding:5px 0px 5px 0px;
+	cursor:pointer;
+}
+
+.stdObj li{
+	line-height:14px;
+	float:left;
+	display:inline;
+	width:120px;
+}
+
+/*LINKS*/
+.stdObj li a:link, a:visited{
+	text-decoration:none;
+	color:#000;
+	min-width: 120px;
+}
+
+.stdObj li a:hover{
+	/*background: red;*/
+	color:red;
+	min-width: 120px;
+	padding:5px 0px 5px 0px;
+}
+
+/*end lInks*/
+
+.standardsWrp{
+	padding:15px;
+	
+}
+
+#triple li {
+	width:33.333%;
 }
 
 /*Premium*/
@@ -596,6 +641,41 @@ element.style {
 	position: relative;
 }
 */
+
+.prmContent{
+	width: 385px;
+	height: 307px;
+	overflow: hidden;
+	background:url(../images/back_box_black.png) transparent;
+	border:5px solid black;
+	margin-left:10px;
+}
+
+
+.prmContent h3{
+	color:#fff;
+	font-size:18px;
+	margin:15px 0px 0px 20px;
+	/*margin-top:50px;*/
+}
+
+
+
+.prmContent article{
+	width: 385px;
+	height: 160px;
+	overflow: hidden;
+	background:#000;
+	background:url(../images/back_box_text_black.png) transparent;
+}
+
+.prmContent article p{
+	padding:0px 15px 10px 10px;
+}
+
+
+/*End Premium*/
+
 .floorContent{
 	position: relative;
 }

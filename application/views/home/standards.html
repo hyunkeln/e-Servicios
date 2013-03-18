@@ -1,6 +1,18 @@
 <div class="standardsWrp">
+<h2>Directorio</h2>
 {{each items}}
-             <div onclick="es.loadStandard(${nid})" class="left stdObj nid${nid}"><h3>Standard ${titulo_corto}.</h1><span>${body}</span> </div>
+	
+             <div class="left stdObj nid${nid}">
+		<!--<ul>-->
+		<!--${titulo_corto}.-->
+		
+		<li><a href="#" onclick="es.loadStandard(${nid})">+ ${titulo_corto}</a></li>
+	       
+		<!--</ul>-->
+		<span>${body}</span> 
+
+		</div>
+
 {{/each}}
 <div class="clear"></div>
 </div>
