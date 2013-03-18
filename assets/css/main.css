@@ -484,6 +484,7 @@ section article{
 }
 .parallax-layer {
     position: absolute;
+	display:none;
 }
 
 
