@@ -589,12 +589,13 @@ element.style {
 	margin-left:10px;
 }
 
+/*
 .stdbj ul{
 	list-style:none;
 	width: 120px;
 	overflow: hidden;
 }
-
+*/
 .stdObj{
 	width:120px;
 	font-size:14px;
@@ -602,14 +603,17 @@ element.style {
 	cursor:pointer;
 }
 
-.stdObj li{
+.stdObj ul li{
 	line-height:14px;
 	float:left;
 	display:inline;
 	width:120px;
+	list-style-type: none;
+  	overflow: hidden;
+	margin:0;
 }
 
-/*LINKS*/
+/*LINKS
 .stdObj li a:link, a:visited{
 	text-decoration:none;
 	color:#000;
@@ -617,17 +621,47 @@ element.style {
 }
 
 .stdObj li a:hover{
-	/*background: red;*/
 	color:red;
 	min-width: 120px;
 	padding:5px 0px 5px 0px;
 }
+*/
+
+.stdObj ul li {
+  float: left;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  width: 120px;
+}
+
+/* line 368, ../../../app/assets/stylesheets/front/style.css.scss */
+.stdObj ul li a {
+  	color: #000;
+	text-decoration:none;
+}
+
+/* line 372, ../../../app/assets/stylesheets/front/style.css.scss */
+.stdObj ul li:hover {
+  background-color: #E03D20;
+}
+
 
 /*end lInks*/
 
 .standardsWrp{
 	padding:15px;
 	
+}
+
+
+.standardsWrp h1{
+	font-family:Arial, Helvetica, sans-serif;
+	/*font-family: Lato,Times,serif;*/
+	color:#000;
+	font-weight:100;
+	font-size:30px;
+	margin:15px 0px 10px 0px;
+	/*margin-top:50px;*/
 }
 
 #triple li {
