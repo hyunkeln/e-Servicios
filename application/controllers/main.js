@@ -29,8 +29,31 @@ $('#ascensorBuilding').ascensor({
 */
  
 $(function() {
-		es.init();
 		
+	es.init();
+	
+	if (Modernizr.audio) 
+	{
+		$('#audio_player_holder').append('<audio id="audio_player"></audio>');
+		$('#audio_player_holder').append('<div id="audio_controls"></div>');
+		
+		if (Modernizr.audio.mp3) {
+		    $("#audio_player").val("sounds/eservicios_audio.mp3");
+		}
+		else if (Modernizr.audio.ogg) {
+		    $("#audio_player").val("sounds/eservicios_audio.ogg");
+		}
+		else if (Modernizr.audio.m4a) {
+		    $("#audio_player").val("sounds/eservicios_audio.m4a");
+		}
+		$("#audio_player").attr('autoplay',true);
+		
+	}
+	else 
+	{
+		console.log('NO se puede usar audio');
+		$("#HTML5Audio").hide();
+	}
 });
 
 
