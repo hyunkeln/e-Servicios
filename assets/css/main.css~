@@ -357,8 +357,14 @@ section.menu .ascensorLink .span, section.menu .ascensorLink h2{
 #menu-top li.eBanca {
     background: url("../images/navii.png") no-repeat scroll 0 -282px transparent;
 }
+#menu-top li.eGobierno:hover, #menu-top li.eGobierno.ascensorLinkActive {
+    background: url("../images/navii.png") no-repeat scroll -243px -141px transparent;
+}
 #menu-top li.eGobierno {
     background: url("../images/navii.png") no-repeat scroll 0 -141px transparent;
+}
+#menu-top li.eShopping:hover, #menu-top li.eShopping.ascensorLinkActive {
+    background: url("../images/navii.png") no-repeat scroll -243px -423px transparent;
 }
 #menu-top li.eShopping {
     background: url("../images/navii.png") no-repeat scroll 0 -423px transparent;
@@ -490,6 +496,15 @@ section article{
 
 #ascensorFloor3 .section-wrapper{
 	margin-top:102px;
+}
+
+
+/***TITULOS PRINCIPALES***/
+#titulos{
+	width:
+	height:
+	margin:0;
+	padding:0px;
 }
 
 /*parallax*/
@@ -849,6 +864,7 @@ element.style {
 	font-size:14px;
 	font-weight:700;
 	margin:0px 0px 0px 20px;
+	width:130px;
 }
 
 /*End Detail*/
@@ -882,7 +898,8 @@ element.style {
 }
 
 .floorPremiums {
-	background-color: black;
+	/*background-color: black;*/
+	background:url(../images/back_box_black.png) repeat transparent;
 }
 .floorPremiums ul{
 	padding-top: 30px;
