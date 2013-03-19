@@ -383,7 +383,9 @@ nav{
     margin: auto;
     width: 810px;
 }
-
+#ascensorFloor1 .section-wrapper{
+	width: 580px;
+}
 
 #floors-wrapper{
 	overflow:hidden;
