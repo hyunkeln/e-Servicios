@@ -91,7 +91,7 @@ var es = {
 			if($('.floor.'+floorNameClr+" ."+cnf.holders.prmCnt+" .premiumsWrp").find("div").length==0) { //Definido en premiums.html
 				$('.floor.'+floorNameClr+" ."+cnf.holders.prmCnt).remove();
 				$('.floor.'+floorNameClr+" ."+cnf.holders.stdCnt).addClass("only");
-			}
+			}else $('.floor.'+floorNameClr+" ."+cnf.holders.stdCnt).addClass("notonly");
 		}); 
 		es.renderServiceTemplateToHolder(cnf.services.standards+floorName,cnf.views.stdVw,'.floor.'+floorNameClr+" ."+cnf.holders.stdCnt);
 		

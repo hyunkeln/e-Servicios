@@ -590,15 +590,61 @@ element.style {
 }
 
 
+
 /*STD Content Right Content*/
-.stdContent{
+
+
+.stdContent.only{
 	width: 395px;
-	height: 307px;
+	height: 107px;
 	overflow: hidden;
 	background:url(../images/back_box_slide.png) transparent;
 	border:5px solid white;
 	margin-left:10px;
 }
+.stdContent.notonly{
+	width: 395px;
+	background-color: black;
+	color: white;
+	margin-left: 10px;
+	height: 64px;
+}
+
+.prmObj img {
+    border: 2px solid white;
+    margin-bottom: 8px;
+    margin-left: 19px;
+}
+
+.only .standardsWrp{
+	padding:15px;	
+}
+.notonly .standardsWrp{
+	padding:0 15px;	
+}
+
+.stdContent.only{
+	height: 307px;
+}
+.standardsWrp h1{
+	display: none;
+}
+.only .standardsWrp h1{
+	display: inline;
+}
+.notonly .standardsWrp .small_button{
+	display: none;
+}
+
+.scrollcontent{
+   height:51px;
+   overflow:hidden;
+}
+.stdContent.only .scrollcontent{
+	height: 150px;
+}
+
+
 
 /*
 .stdbj ul{
@@ -651,6 +697,9 @@ element.style {
   	color: #000;
 	text-decoration:none;
 }
+.notonly .stdObj ul li a{
+	color: white;
+}
 
 /* line 372, ../../../app/assets/stylesheets/front/style.css.scss */
 .stdObj ul li:hover {
@@ -663,10 +712,7 @@ element.style {
 
 /*end lInks*/
 
-.standardsWrp{
-	padding:15px;
-	
-}
+
 
 
 .standardsWrp h1{
@@ -693,14 +739,16 @@ element.style {
 
 .prmContent{
 	width: 385px;
-	height: 307px;
+	height: 244px;
 	overflow: hidden;
 	background:url(../images/back_box_black.png) transparent;
 	border:5px solid black;
 	margin-left:10px;
 }
 
-
+.premiumsWpr h2{
+	margin-top: 3px;
+}
 .prmContent h3{
 	color:#fff;
 	font-size:18px;
@@ -802,9 +850,23 @@ element.style {
 	cursor:pointer;
 }
 
-.scrollcontent{
-   height:150px;
-   overflow:hidden;
+
+#ascensorFloor4 .section-wrapper{
+	margin-top: 102px;
+}
+
+.floorPremiums {
+	background-color: black;
+}
+.floorPremiums ul{
+	padding-top: 30px;
+}
+.floorPremiums ul .premiumProduct {
+    border: 1px solid white;
+    float: left;
+    list-style: none outside none;
+    margin-bottom: 24px;
+    margin-left: 24px;
 }
 
 
