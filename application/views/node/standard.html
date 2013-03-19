@@ -1,8 +1,28 @@
 {{each items}}
+
+
+<div id="detail_base">
+
+
+
+<div class="thumb_detail left">
+<div class="prev_btn" onclick="nav.nextStandard(${nid});"><img src="assets/images/big_slide_arrow01.png" /></div>
+</div>
+
+<div class="desc_detail left">
+<div class="marginTop">
 <h2>${title}</h2>
-<div>${body}</div>
-<br>
-<div onclick="nav.toFloorHome(this);">Back</div>
-<div onclick="nav.nextStandard(${nid});">Next</div>
-<div onclick="nav.nextStandard(${nid},false);">Prev</div>
+<p>${body}</p>
+</div>
+<div class="btn_back" onclick="nav.toFloorHome(this);">Volver al directorio</div>
+
+</div>
+
+
+<div class="next_btn onclick="nav.nextStandard(${nid},false);"><img src="assets/images/big_slide_arrow02.png" /></div>
+</div>
+
+<div class="clear"></div>
+
 {{/each}} 
+

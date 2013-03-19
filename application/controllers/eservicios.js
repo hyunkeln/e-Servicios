@@ -219,3 +219,18 @@ function clearString(str,chars){
 	return str;
 };
  
+
+
+/*Scroll Top*/
+function scrollToTop(object){
+   var myObject = $(object).siblings('.scrollcontent');
+   var currentScroll = myObject.scrollTop() - 50;
+   myObject.animate({scrollTop : currentScroll},'slow');
+}
+
+function scrollToBottom(object){
+   var myObject = $(object).siblings('.scrollcontent');
+   var currentScroll = myObject.scrollTop() + 50;
+   myObject.animate({scrollTop : currentScroll},'slow');
+}
+

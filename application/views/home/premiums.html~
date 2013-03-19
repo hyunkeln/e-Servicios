@@ -1,5 +1,0 @@
-<div class="premiumsWrp">
-{{each items}}
-             <div onclick="es.loadPremium(${nid})" class="left prmObj nid${nid}"><h3>Premium ${title}.</h1><span>${body}</span> </div>
-{{/each}}
-</div>

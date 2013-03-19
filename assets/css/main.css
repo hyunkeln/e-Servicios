@@ -30,6 +30,14 @@ body {
     line-height: 1.4;
 }
 
+.marginCenter{
+	margin:0 auto;
+}
+
+.marginTop{
+	margin-top:75px;
+}
+
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -599,7 +607,7 @@ element.style {
 .stdObj{
 	width:120px;
 	font-size:14px;
-	padding:5px 0px 5px 0px;
+	padding:0px;
 	cursor:pointer;
 }
 
@@ -610,7 +618,8 @@ element.style {
 	width:120px;
 	list-style-type: none;
   	overflow: hidden;
-	margin:0;
+	margin:0px 2px 0px 2px;
+	padding:2px 0px 0px 2px;
 }
 
 /*LINKS
@@ -629,8 +638,8 @@ element.style {
 
 .stdObj ul li {
   float: left;
-  margin-left: 5px;
-  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-bottom: 2px;
   width: 120px;
 }
 
@@ -642,9 +651,12 @@ element.style {
 
 /* line 372, ../../../app/assets/stylesheets/front/style.css.scss */
 .stdObj ul li:hover {
-  background-color: #E03D20;
+  	background-color: #d92323;
 }
 
+.stdObj ul li a:hover {
+	color:white;
+}
 
 /*end lInks*/
 
@@ -710,6 +722,65 @@ element.style {
 
 /*End Premium*/
 
+
+/*Detail Standard*/
+
+#detail_base{
+	width:880px;
+	height:290px;
+	margin:0 auto;
+	padding:140px 0px 0px 45px;
+}
+
+.thumb_detail{
+	width:320px;
+	height:290px;
+	background:url(../images/stock_photo.jpg) no-repeat transparent;
+	padding-right:20px;
+}
+
+.desc_detail{
+	width:460px;
+	height:290px;
+	background:url(../images/back_box_black.png) repeat transparent;
+}
+
+.desc_detail h2{
+	color:#fff;
+	font-size:18px;
+	padding:0px 10px 0px 20px;
+}
+
+.desc_detail p{
+	color:#fff;
+	font-size:12px;
+	padding:0px 20px 10px 20px;
+}
+
+.next_btn{
+	position:relative;
+	float:left;
+	cursor:pointer;
+}
+	
+.prev_btn{
+	position:relative;
+	float:left;
+	cursor:pointer;
+}
+
+
+.btn_back{
+	background-color:#000;
+	padding:5px;
+	color:#fff;
+	cursor:pointer;
+	font-size:14px;
+	font-weight:700;
+	margin:0px 0px 0px 20px;
+}
+
+/*End Detail*/
 .floorContent{
 	position: relative;
 }
@@ -720,4 +791,16 @@ element.style {
 	width: 100%;
 }
 
+
+/**Scroll Top**/
+
+.small_button{
+   padding-left:360px;
+	cursor:pointer;
+}
+
+.scrollcontent{
+   height:150px;
+   overflow:hidden;
+}
 

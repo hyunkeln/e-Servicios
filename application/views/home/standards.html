@@ -1,18 +1,22 @@
 <div class="standardsWrp">
-<h2>Directorio</h2>
-{{each items}}
-	
-             <div class="left stdObj nid${nid}">
-		<!--<ul>-->
-		<!--${titulo_corto}.-->
-		
-		<li><a href="#" onclick="es.loadStandard(${nid})">+ ${titulo_corto}</a></li>
-	       
-		<!--</ul>-->
-		<span>${body}</span> 
+<h1>Directorio</h1>
+<div onclick="scrollToTop(this);" class="small_button"><img src="assets/images/arrow_up.gif"/></div>
+<div class="scrollcontent">
+   {{each items}}
 
-		</div>
+          <div class="left stdObj nid${nid}">
+           <ul>
+           <!--${titulo_corto}.-->
 
-{{/each}}
+           <li><a href="#" onclick="es.loadStandard(${nid})">+ ${titulo_corto}</a></li>
+
+           </ul>
+           <span>${body}</span>
+
+           </div>
+
+   {{/each}}
+</div>
+<div onclick="scrollToBottom(this)" class="small_button"><img src="assets/images/arrow_down.gif"/></div>
 <div class="clear"></div>
 </div>
