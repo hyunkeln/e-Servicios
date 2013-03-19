@@ -5,13 +5,6 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald);
 @import url(http://fonts.googleapis.com/css?family=Lato:100); 
 
-/************/
-@import url ("shopping.css");
-@import url ("gobierno.css");
-@import url ("servicios.css");
-@import url ("ebanco.css");
-
-
 html,
 button,
 input,
@@ -22,7 +15,9 @@ textarea {
 
 /***Typography***/
 h1, h2, h3 {
-	font-family:Arial,Helvetica, sans-serif;
+	/*font-family:Arial,Helvetica, sans-serif;*/
+	font-family: Lato,Times,serif;
+	font-weight:normal;
 }
 
 body {
@@ -382,7 +377,6 @@ nav{
 .section-wrapper {
     margin: auto;
     width: 810px;
-	margin-top:100px;
 }
 #ascensorFloor1 .section-wrapper{
 	width: 580px;
@@ -486,6 +480,16 @@ section article{
 
 #ascensorFloor7{
 	background: #CA9E67;	
+}
+
+
+/*MARGIN FLOOR*/
+#ascensorFloor2 .section-wrapper{
+	margin-top:102px;
+}
+
+#ascensorFloor3 .section-wrapper{
+	margin-top:102px;
 }
 
 /*parallax*/
@@ -634,7 +638,10 @@ element.style {
 	display: inline;
 }
 .notonly .standardsWrp .small_button{
-	display: none;
+	display: block;
+	position:absolute;
+	margin: -10px 0px 0px -2px;
+	z-index:-99999;
 }
 
 .scrollcontent{
@@ -647,7 +654,7 @@ element.style {
 
 
 .scrolldetail{
-	height: 100px;
+	height: 98px;
 	overflow:hidden;
 }
 
@@ -722,8 +729,8 @@ element.style {
 
 
 .standardsWrp h1{
-	font-family:Arial, Helvetica, sans-serif;
-	/*font-family: Lato,Times,serif;*/
+	/*font-family:Arial, Helvetica, sans-serif;*/
+	font-family: Lato,Times,serif;
 	color:#000;
 	font-weight:100;
 	font-size:30px;
@@ -793,7 +800,7 @@ element.style {
 	width:880px;
 	height:290px;
 	margin:0 auto;
-	padding:140px 0px 0px 45px;
+	padding:80px 0px 0px 45px;
 }
 
 .thumb_detail{
@@ -859,8 +866,10 @@ element.style {
 /**Scroll Top**/
 
 .small_button{
-   padding-left:360px;
+   	padding-left:385px;
 	cursor:pointer;
+	position:absolute;
+	z-index:-99999;
 }
 .small_button_detail{
    padding-left:440px;
@@ -889,6 +898,12 @@ element.style {
 .columnLightBox_data{
 	width:310px;
 	height:297px;
+}
+
+.columnLightBox_data p{
+	padding: 10px 5px 10px 5px;
+	border-top: 2px solid #ccc;
+	border-bottom: 2px solid #ccc;
 }
 
 .columnLightBox_image{

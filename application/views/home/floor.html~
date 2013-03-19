@@ -2,7 +2,7 @@
 <section  class="floor ${clearString(name)}" name='${name}'>
 	<div class="section-wrapper"> 
 		<div class="floorHome floorContent">
-
+<br/><br/>
 	    	<div><span> </span><h1>${descr}</h1> </div>
 	    	<div class="left ${cnf.holders.blogCnt}"></div>
 	    	<div class="left ${cnf.holders.prmCnt}"></div>

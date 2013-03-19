@@ -18,6 +18,7 @@
 #simplemodal-container .simplemodal-data {padding:8px;}
 
 #simplemodal-container .simplemodal-data h2{color:#dd4402;}
+#simplemodal-container .simplemodal-data p{color:#000; font-size:12px; line-height:1.2em;}
 
 #simplemodal-container code {background:#141414; /*border-left:3px solid #65B43D;*/ border-radius:6px; color:#bbb; display:block; font-size:12px; margin-bottom:12px; padding:4px 6px 6px;}
 #simplemodal-container a {color:#ddd;}
