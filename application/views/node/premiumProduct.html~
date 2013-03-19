@@ -1,7 +1,7 @@
 {{each items}}
 <div class="premiumProductFull product${nid}">
 
-<div class="columnLightBox_image left"><img src="assets/images/foto_detail.jpg" /></div>
+<div class="columnLightBox_image left"><img src="assets/images/back_box_black.png" /></div>
 
 <div class="columnLightBox_data left">
 <h2>${title}</h2>

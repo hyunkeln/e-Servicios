@@ -223,13 +223,13 @@ function clearString(str,chars){
 
 /*Scroll Top*/
 function scrollToTop(object, clase){
-   var myObject = $(object).siblings(clase);
+   var myObject = $(object).siblings('.scrollcontent');
    var currentScroll = myObject.scrollTop() - 50;
    myObject.animate({scrollTop : currentScroll},'slow');
 }
 
-function scrollToBottom(object, clase){
-   var myObject = $(object).siblings(clase);
+function scrollToBottom(object){
+   var myObject = $(object).siblings('.scrollcontent');
    var currentScroll = myObject.scrollTop() + 50;
    myObject.animate({scrollTop : currentScroll},'slow');
 }

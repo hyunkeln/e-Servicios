@@ -13,11 +13,10 @@
 <div class="marginTop">
 <h2>${title}</h2>
 
-<div onclick="scrollToTop(this,'.scrolldetail');" class="small_button_detail"><img src="assets/images/arrow_up.gif"/></div>
+<div onclick="scrollToTop(this,'.scrolldetail');" class="small_button"><img src="assets/images/arrow_up.gif"/></div>
 <div class="scrolldetail">
 <p>${body}</p>
 </div>
-<div onclick="scrollToBottom(this, '.scrolldetail')" class="small_button_detail"><img src="assets/images/arrow_down.gif"/></div>
 
 </div>
 <div class="btn_back" onclick="nav.toFloorHome(this);">Volver al directorio</div>

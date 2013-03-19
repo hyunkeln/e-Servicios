@@ -1,6 +1,6 @@
 <div class="standardsWrp">
 <h1>Directorio</h1>
-<div onclick="scrollToTop(this,'.scrollcontent');" class="small_button"><img src="assets/images/arrow_up.gif"/></div>
+<div onclick="scrollToTop(this);" class="small_button"><img src="assets/images/arrow_up.gif"/></div>
 <div class="scrollcontent">
    {{each items}}
 
@@ -17,6 +17,6 @@
 
    {{/each}}
 </div>
-<div onclick="scrollToBottom(this, '.scrollcontent')" class="small_button"><img src="assets/images/arrow_down.gif"/></div>
+<div onclick="scrollToBottom(this)" class="small_button"><img src="assets/images/arrow_down.gif"/></div>
 <div class="clear"></div>
 </div>
