@@ -35,24 +35,26 @@ $(function() {
 	if (Modernizr.audio) 
 	{
 		$('#audio_player_holder').append('<audio id="audio_player"></audio>');
-		$('#audio_player_holder').append('<div id="audio_controls"></div>');
+		$('#audio_player_holder').append('<div id="audio_controls">\
+										  	<div id="play_button" class="player_hide" onclick="document.getElementById(\'audio_player\').play();$(this).addClass(\'player_hide\');$(\'#pause_button\').removeClass(\'player_hide\');"></div>\
+										  	<div id="pause_button" onclick="document.getElementById(\'audio_player\').pause();$(this).addClass(\'player_hide\');$(\'#play_button\').removeClass(\'player_hide\');"></div>\
+										  </div>');
 		
 		if (Modernizr.audio.mp3) {
-		    $("#audio_player").val("sounds/eservicios_audio.mp3");
+		    $("#audio_player").attr('src',"assets/sounds/eservicios_audio.mp3");
 		}
 		else if (Modernizr.audio.ogg) {
-		    $("#audio_player").val("sounds/eservicios_audio.ogg");
+		    $("#audio_player").attr('src',"assets/sounds/eservicios_audio.ogg");
 		}
 		else if (Modernizr.audio.m4a) {
-		    $("#audio_player").val("sounds/eservicios_audio.m4a");
+		    $("#audio_player").attr('src',"assets/sounds/eservicios_audio.m4a");
 		}
 		$("#audio_player").attr('autoplay',true);
-		
+		$("#audio_player").attr('loop',true);
 	}
 	else 
 	{
-		console.log('NO se puede usar audio');
-		$("#HTML5Audio").hide();
+		$("#audio_player_holder").remove();
 	}
 });
 
