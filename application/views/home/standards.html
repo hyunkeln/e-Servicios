@@ -4,11 +4,11 @@
 <div class="scrollcontent">
    {{each items}}
 
-          <div class="left stdObj nid${nid}">
+          <div class="left stdObj nid${nid}" onclick="es.loadStandard(${nid})">
            <ul>
            <!--${titulo_corto}.-->
 
-           <li><a href="#" onclick="es.loadStandard(${nid})">+ ${titulo_corto}</a></li>
+           <li><a href="#" >+ ${titulo_corto}</a></li>
 
            </ul>
            <span>${body}</span>
