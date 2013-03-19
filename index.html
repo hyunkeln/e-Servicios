@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"  xmlns:fb="https://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"  xmlns:fb="https://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"  xmlns:fb="https://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"  xmlns:fb="https://www.facebook.com/2008/fbml"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
+        
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title></title>
         <meta name="description" content="">
@@ -47,6 +48,28 @@
         <script src="application/config/config.js"></script>
         <script src="application/controllers/eservicios.js"></script>
         <script src="application/controllers/main.js"></script>
-        <!-- <img src="assets/images/dots.png" style="display: block; top: 0px; left: 0px; width: 1024px; height: 3000px; z-index: 0; position: fixed;"> -->
+        <script src="application/controllers/share.js"></script>
+        <div id="fb-root"></div>
+		<script>
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '143468419163149', 
+		      status     : true, 
+		      cookie     : true, 
+		      xfbml      : true  
+		    });
+		    
+		  };
+		
+		  (function(d, debug){
+		  
+		     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement('script'); js.id = id; js.async = true;
+		     console.log(ref);
+		     js.src = "https://connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+		     ref.parentNode.insertBefore(js, ref);
+		   }(document, /*debug*/ false));
+		</script>        
     </body>
 </html>

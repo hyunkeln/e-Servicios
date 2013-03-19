@@ -9,4 +9,4 @@
  */
 
 /* IE 6 hacks */
-#simplemodal-container a.modalCloseImg {right:2px; width:20px; height:20px; /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/basic/x.png',sizingMethod='scale');*/}
+#simplemodal-container a.modalCloseImg {background:none; right:-14px; width:22px; height:26px; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/basic/x.png',sizingMethod='scale');}
