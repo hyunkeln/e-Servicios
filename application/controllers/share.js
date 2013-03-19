@@ -1,26 +1,34 @@
 var share = {
 	
 	floors : {
+		'e-Servicios' :{
+			'name':'name',
+			'link':top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/Home',
+			'picture': top.location.protocol+'//'+top.location.hostname+top.location.pathname+'/e-Servcios.png',
+			'caption': 'caption',
+			'description' : 'description',
+			'short_link' : 'http://short_link.com' 
+		},
 		'e-Banca' :{
 			'name':'name',
-			'link':'http://link.com',
-			'picture': 'http://fbrell.com/f8.jpg',
+			'link':top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/e-Banca',
+			'picture': top.location.protocol+'//'+top.location.hostname+top.location.pathname+'/e-Banca.png',
 			'caption': 'caption',
 			'description' : 'description',
 			'short_link' : 'http://short_link.com' 
 		},
 		'e-Gobierno' :{
 			'name':'name',
-			'link':'http://link.com',
-			'picture': 'http://fbrell.com/f8.jpg',
+			'link':top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/e-Gobierno',
+			'picture': top.location.protocol+'//'+top.location.hostname+top.location.pathname+'/e-Gobierno.png',
 			'caption': 'caption',
 			'description' : 'description',
 			'short_link' : 'http://short_link.com'
 		},
 		'e-Shopping' : {
 			'name':'name',
-			'link':'http://link.com',
-			'picture': 'http://fbrell.com/f8.jpg',
+			'link':top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/e-Shopping',
+			'picture': top.location.protocol+'//'+top.location.hostname+top.location.pathname+'/e-Shopping.png',
 			'caption': 'caption',
 			'description' : 'description',
 			'short_link' : 'http://short_link.com'
