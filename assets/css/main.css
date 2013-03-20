@@ -999,6 +999,22 @@ element.style {
     width: 100px;
 }
 .sharer{
+	background: none repeat scroll 0 0 white;
+    height: 35px;
+    margin: auto;
+    padding-top: 4px;
+    width: 811px;
+}
+#ascensorFloor1 .sharer{
+	width: 412px;
+	background-color: transparent;
+}
+.floorStandards .sharer, #nodeContent .sharer{
+	background-color: transparent;
+	width: 200px;
+	
+}
+.sharer-wrp{
 	margin: auto;
 	width: 190px;
 	margin-top: 7px;
