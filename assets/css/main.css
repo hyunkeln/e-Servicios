@@ -712,6 +712,15 @@ element.style {
 }
 
 
+.scrollproduct{
+	height: 150px;
+	overflow:hidden;
+	padding:5px;
+	border-bottom: 2px solid #ccc;
+	border-top: 2px solid #ccc;
+}
+
+
 /*
 .stdbj ul{
 	list-style:none;
@@ -930,6 +939,11 @@ element.style {
 	cursor:pointer;
 }
 
+.small_button_product{
+   padding-left:350px;
+	cursor:pointer;
+}
+
 
 #ascensorFloor4 .section-wrapper{
 	padding-top:78px;
@@ -959,8 +973,8 @@ element.style {
 
 .columnLightBox_data p{
 	padding: 10px 5px 10px 5px;
-	border-top: 2px solid #ccc;
-	border-bottom: 2px solid #ccc;
+	/*border-top: 2px solid #ccc;*/
+	
 }
 
 .columnLightBox_image{
