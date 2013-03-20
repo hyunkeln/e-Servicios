@@ -399,7 +399,8 @@ nav{
 }
 
 section{
-	overflow:auto;
+	overflow:hidden;
+	/*overflow:auto;*/
 box-shadow: inset 0 0 0px 5px rgb(0,0,0);
 }
 
