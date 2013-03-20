@@ -2,36 +2,40 @@ var share = {
 	
 	floors : {
 		'e-Servicios' :{
-			'name':'e-Servicios',
+			'name':'Prodigy MSN - e-Servicios',
 			'link':top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/Home',
 			'picture': top.location.protocol+'//'+top.location.hostname+top.location.pathname+'assets/images/share/e-Servcios.png',
-			'caption': 'Prodigy MSN | e-Servicios',
-			'description' : 'Aquí los mejores consejos para cuidar tus finanzas. Haz fácil tus compras o trámites gubernamental es con #eServicios.',
-			'short_link' : 'http://short_link.com' 
+			'caption': 'e-Servicios',
+			'description' : '¿Quieres saber cómo realizar tus compras o trámites gubernamentales por vía electrónica? Aquí encontrarás consejos y datos para cuidar tus finanzas.',
+			'short_description' : 'Aquí los mejores consejos para cuidar tus finanzas. Haz fácil tus compras o trámites gubernamental es con #eServicios.',
+			'short_link' : top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/Home'
 		},
 		'e-Banca' :{
-			'name':'e-Banca',
+			'name':'Prodigy MSN - e-Servicios',
 			'link':top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/e-Banca',
 			'picture': top.location.protocol+'//'+top.location.hostname+top.location.pathname+'assets/images/share/e-Banca.png',
-			'caption': 'Prodigy MSN | e-Banca',
-			'description' : 'Tus trámites y pagos de servicios gubernamentales podrás realizarlos de manera con  estos consejos #eGobierno',
-			'short_link' : 'http://short_link.com' 
+			'caption': 'e-Banca',
+			'description' : 'Tu banco puede estar más cerca de ti, aquí tenemos los mejores consejos y datos para ayudarte con cualquier trámite o servicio.',
+			'short_description' : 'Saca el máximo provecho a tu cuenta bancaria, aquí en e-servicios encontrarás los mejores tips #eBanca',
+			'short_link' : top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/Home'
 		},
 		'e-Gobierno' :{
-			'name':'e-Gobierno',
+			'name':'Prodigy MSN - e-Servicios',
 			'link':top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/e-Gobierno',
 			'picture': top.location.protocol+'//'+top.location.hostname+top.location.pathname+'assets/images/share/e-Gobierno.png',
-			'caption': 'Prodigy MSN | e-Gobierno',
-			'description' : 'Saca el máximo provecho a tu cuenta bancaria, aquí en e-servicios encontrarás los mejores tips #eBanca',
-			'short_link' : 'http://short_link.com'
+			'caption': 'e-Gobierno',
+			'description' : 'Entérate de cómo realizar cualquier trámite y pago de servicios e instituciones gubernamentales  vía electrónica. Aquí encontrarás consejos y datos para hacerlo de manera rápida y efectiva.',
+			'short_description' : 'Tus trámites y pagos de servicios gubernamentales podrás realizarlos de manera con  estos consejos #eGobierno',
+			'short_link' : top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/Home'
 		},
 		'e-Shopping' : {
-			'name':'e-Shopping',
+			'name':'Prodigy MSN - e-Servicios',
 			'link':top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/e-Shopping',
 			'picture': top.location.protocol+'//'+top.location.hostname+top.location.pathname+'assets/images/share/e-Shopping.png',
-			'caption': 'Prodigy MSN | e-Shopping',
-			'description' : 'Aquí encontrarás una gran variedad de tiendas para realizar tus compras en línea #eShopping',
-			'short_link' : 'http://short_link.com'
+			'caption': 'e-Shopping',
+			'description' : 'Encuentra la mejor tienda para realizar tu compras electrónicas, visita nuestro directorio de e-servicios.',
+			'short_description' : 'Aquí encontrarás una gran variedad de tiendas para realizar tus compras en línea #eShopping'
+			'short_link' : top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/Home'
 		}
 		
 	},
@@ -60,7 +64,7 @@ var share = {
 			if(typeof share.floors[floor]!=="undefined")
 			{
 				var data_floor = share.floors[floor];
-				share.tw_popup(data_floor.description , data_floor.short_link);
+				share.tw_popup(data_floor.short_description , data_floor.short_link);
 				return true;
 			}
 			else
