@@ -34,7 +34,7 @@ var share = {
 			'picture': top.location.protocol+'//'+top.location.hostname+top.location.pathname+'assets/images/share/e-Shopping.png',
 			'caption': 'e-Shopping',
 			'description' : 'Encuentra la mejor tienda para realizar tu compras electrónicas, visita nuestro directorio de e-servicios.',
-			'short_description' : 'Aquí encontrarás una gran variedad de tiendas para realizar tus compras en línea #eShopping'
+			'short_description' : 'Aquí encontrarás una gran variedad de tiendas para realizar tus compras en línea #eShopping',
 			'short_link' : top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/Home'
 		}
 		

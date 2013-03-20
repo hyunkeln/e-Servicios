@@ -180,7 +180,7 @@
 		//when hash change, start hashchange function
 		$(window).on("hashchange", function () {
 			hashChange();
-			console.log('cargar la sección');
+			//console.log('cargar la sección');
 		});
 		
 		//start hashChange function at document loading

@@ -45,10 +45,10 @@
         </div>
 		<script src="application/libraries/jquery.js"></script>
         <script src="application/libraries/plugins.js"></script>
-        <script src="application/libraries/ascensor.js"></script>
+        <script src="application/libraries/ascensor.js?v1"></script>
         
         <script src="application/config/config.js"></script>
-        <script src="application/controllers/eservicios.js"></script>
+        <script src="application/controllers/eservicios.js?v1"></script>
         <script src="application/controllers/main.js"></script>
         <script src="application/controllers/share.js"></script>
         <div id="fb-root"></div>
@@ -61,14 +61,14 @@
 		      xfbml      : true  
 		    });
 		    
-		  };
+		  }; 
 		
 		  (function(d, debug){
 		  
 		     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
 		     if (d.getElementById(id)) {return;}
 		     js = d.createElement('script'); js.id = id; js.async = true;
-		     console.log(ref);
+		      //console.log(ref);
 		     js.src = "https://connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
 		     ref.parentNode.insertBefore(js, ref);
 		   }(document, /*debug*/ false));

@@ -28,6 +28,10 @@ $('#ascensorBuilding').ascensor({
 
 */
  
+
+
+
+ 
 $(function() {
 		
 	es.init();
@@ -59,3 +63,6 @@ $(function() {
 });
 
 
+function trackPage(call){
+	console.log("Track page: " + call);
+}
