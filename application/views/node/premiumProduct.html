@@ -16,10 +16,9 @@
 
 
 <div>
-<img src="http://msn-rd.com/eservicios/sites/default/files/66x66.png" />
-<img src="http://msn-rd.com/eservicios/sites/default/files/66x66.png" />
-<img src="http://msn-rd.com/eservicios/sites/default/files/66x66.png" />
-<img src="http://msn-rd.com/eservicios/sites/default/files/66x66.png" />
+{{each(i,thmb) thumbs}}
+<img src="${thmb}" title="${title}" alt="${title}" />
+{{/each}}
 </div>
 
 </div>
