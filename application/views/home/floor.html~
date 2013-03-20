@@ -2,8 +2,8 @@
 <section  class="floor ${clearString(name)}" name='${name}'>
 	<div class="section-wrapper"> 
 		<div class="floorHome floorContent">
-<br/><br/>
-	    	<div><span> </span><h1>${descr}</h1> </div>
+<!--<div id="titulos" class="icon_header"><h1></h1></div>-->
+	    	<div class="titulos"><h1>Floor ${descr}</h1> </div>
 	    	<div class="left ${cnf.holders.blogCnt}"></div>
 	    	<div class="left ${cnf.holders.prmCnt}"></div>
 	    	<div class="left ${cnf.holders.stdCnt}"></div>

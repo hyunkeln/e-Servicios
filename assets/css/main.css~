@@ -4,6 +4,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lobster);
 @import url(http://fonts.googleapis.com/css?family=Oswald);
 @import url(http://fonts.googleapis.com/css?family=Lato:100); 
+@import url("player.css");
 
 html,
 button,
@@ -491,20 +492,45 @@ section article{
 
 /*MARGIN FLOOR*/
 #ascensorFloor2 .section-wrapper{
-	margin-top:102px;
+	padding-top:78px;
+	background:url(../images/iconoBanca.png) no-repeat transparent;
+	background-position: -8px 76px;
 }
 
 #ascensorFloor3 .section-wrapper{
-	margin-top:102px;
+	padding-top:78px;
+	background:url(../images/iconoGobierno.png) no-repeat transparent;
+	background-position: -8px 76px;
 }
 
 
 /***TITULOS PRINCIPALES***/
-#titulos{
-	width:
-	height:
-	margin:0;
+.titulos{
+	width:500px;
+	height:64px;
 	padding:0px;
+}
+
+.titulos h1{
+	    color: #FFFFFF;
+	    font-family: Lato,Times,serif;
+	    font-size: 70px;
+	    font-weight: normal;
+	    letter-spacing: -0.025em;
+	    line-height: 68%;
+	    text-shadow: 0 1px 1px black;
+	    margin: 0;
+		margin-left:60px;
+}
+
+.icon_header{
+	content:"";
+	float:left;
+	width:64px;
+	height:64px;
+	margin:0;
+	background:url(../images/iconoShop.png) no-repeat transparent;
+	background-position: 0 -14px;
 }
 
 /*parallax*/
@@ -894,7 +920,9 @@ element.style {
 
 
 #ascensorFloor4 .section-wrapper{
-	margin-top: 102px;
+	padding-top:78px;
+	background:url(../images/iconoShop.png) no-repeat transparent;
+	background-position: -8px 76px;
 }
 
 .floorPremiums {
@@ -947,4 +975,32 @@ element.style {
 }
 .sharer div.twitter{
 	margin-top: 1px;
+}
+
+/*rollOver effect*/
+.rollover_logo{
+   position:absolute;
+   width:100px;
+   height:20px;
+   font-size:12px;
+   color:#fff;
+   padding-top:80px;
+   text-align:center;
+	text-shadow: 0 white;
+   margin: 2px 0px 0px 21px;
+   background-color:#D92323;
+   opacity:0;
+}
+
+.rollover_detail{
+   position:absolute;
+   width:130px;
+   height:95px;
+   font-size:40px;
+   color:#fff;
+   padding-top:35px;
+   text-align:center;
+   margin: 0px 0px 0px 0px;
+   background-color:#D92323;
+   opacity:0;
 }

@@ -236,3 +236,12 @@ function scrollToBottom(object, clase){
    myObject.animate({scrollTop : currentScroll},'slow');
 }
 
+/*Over logos*/
+function showRedMask(object){
+   $("#mask_"+object).removeClass('redmask');
+   $(".redmask").animate({opacity : 0.0},'fast');
+   $("#mask_"+object).animate({opacity : 0.5},'fast');
+}
+function hideRedMask(object){
+   $("#mask_"+object).addClass('redmask');
+}

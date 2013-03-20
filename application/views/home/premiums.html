@@ -1,6 +1,13 @@
-<div class="premiumsWrp">
+<!--<div class="premiumsWrp">
 <h2>Directorio</h2>
 {{each items}}
              <div onclick="es.loadPremium(${nid})" class="left prmObj nid${nid}"><span></span><img width="100" height="100" src="${image}" alt="${title}"></div>
+{{/each}}
+</div>-->
+
+<div class="premiumsWrp">
+<h2>Directorio</h2>
+{{each items}}
+            <div onclick="es.loadPremium(${nid})" class="left prmObj nid${nid}" onmouseover="showRedMask(${nid});" onmouseout="hideRedMask(${nid});"><div id="mask_${nid}" class="rollover_logo redmask">${title}</div><img width="100" height="100" src="${image}" title="${title}"></div>
 {{/each}}
 </div>
