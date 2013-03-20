@@ -719,13 +719,16 @@ element.style {
 
 
 .scrollproduct{
-	height: 150px;
+	height: 120px;
 	overflow:hidden;
 	padding:5px;
 	border-bottom: 2px solid #ccc;
 	border-top: 2px solid #ccc;
 }
 
+.scrollproduct p{
+	margin:5px 0px 5px 0px;
+}
 
 /*
 .stdbj ul{
