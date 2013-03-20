@@ -204,11 +204,11 @@ nav = {
 	},
 	setVisible:function(visible){
 		if(!visible){
-			$("nav").fadeOut();
-			$("#remate").fadeOut();
+			$("nav").fadeOut("slow");
+			$("#remate").fadeOut("slow");
 		}else{
-			$("nav").fadeIn();
-			$("#remate").fadeIn();
+			$("nav").fadeIn("slow");
+			$("#remate").fadeIn("slow");
 		}
 	}
 }
