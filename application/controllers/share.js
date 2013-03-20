@@ -2,35 +2,35 @@ var share = {
 	
 	floors : {
 		'e-Servicios' :{
-			'name':'name',
+			'name':'e-Servicios',
 			'link':top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/Home',
 			'picture': top.location.protocol+'//'+top.location.hostname+top.location.pathname+'assets/images/share/e-Servcios.png',
-			'caption': 'caption',
-			'description' : 'description',
+			'caption': 'Prodigy MSN | e-Servicios',
+			'description' : 'Aquí los mejores consejos para cuidar tus finanzas. Haz fácil tus compras o trámites gubernamental es con #eServicios.',
 			'short_link' : 'http://short_link.com' 
 		},
 		'e-Banca' :{
-			'name':'name',
+			'name':'e-Banca',
 			'link':top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/e-Banca',
 			'picture': top.location.protocol+'//'+top.location.hostname+top.location.pathname+'assets/images/share/e-Banca.png',
-			'caption': 'caption',
-			'description' : 'description',
+			'caption': 'Prodigy MSN | e-Banca',
+			'description' : 'Tus trámites y pagos de servicios gubernamentales podrás realizarlos de manera con  estos consejos #eGobierno',
 			'short_link' : 'http://short_link.com' 
 		},
 		'e-Gobierno' :{
-			'name':'name',
+			'name':'e-Gobierno',
 			'link':top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/e-Gobierno',
 			'picture': top.location.protocol+'//'+top.location.hostname+top.location.pathname+'assets/images/share/e-Gobierno.png',
-			'caption': 'caption',
-			'description' : 'description',
+			'caption': 'Prodigy MSN | e-Gobierno',
+			'description' : 'Saca el máximo provecho a tu cuenta bancaria, aquí en e-servicios encontrarás los mejores tips #eBanca',
 			'short_link' : 'http://short_link.com'
 		},
 		'e-Shopping' : {
-			'name':'name',
+			'name':'e-Shopping',
 			'link':top.location.protocol+'//'+top.location.hostname+top.location.pathname+'#/e-Shopping',
 			'picture': top.location.protocol+'//'+top.location.hostname+top.location.pathname+'assets/images/share/e-Shopping.png',
-			'caption': 'caption',
-			'description' : 'description',
+			'caption': 'Prodigy MSN | e-Shopping',
+			'description' : 'Aquí encontrarás una gran variedad de tiendas para realizar tus compras en línea #eShopping',
 			'short_link' : 'http://short_link.com'
 		}
 		

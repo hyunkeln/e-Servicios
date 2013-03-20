@@ -20,8 +20,18 @@
 <div onclick="scrollToBottom(this, '.scrolldetail')" class="small_button_detail"><img src="assets/images/arrow_down.gif"/></div>
 
 </div>
-<div class="btn_back" onclick="nav.toFloorHome(this);">Volver al directorio</div>
-
+<div class="btn_back left" onclick="nav.toFloorHome(this);">Volver al directorio</div>
+<div class="sharer left">
+	<div class="facebook left">
+		<img src="assets/images/facebook-c.png" onclick="share.fb.item('${title}',top.location.protocol+'//'+top.location.host+top.location.pathname+'?nid=${$nid}'+top.location.hash,'${foto_del_producto}','e-Servicios','${body}');"/>
+	</div>
+	<div class="twitter left">
+		<img src="assets/images/twittear.png" onclick="share.tw.item('${title}',top.location.protocol+'//'+top.location.host+top.location.pathname+'?nid=${$nid}'+top.location.hash);"/>
+	</div>
+	<div class="clear">
+	</div>
+</div>
+<div class="clear"></div>
 </div>
 
 
