@@ -315,6 +315,17 @@ section.menu .ascensorLink.eGobierno{
 section.menu .ascensorLink .wrapper{
 	background: url("../images/flecha.png") no-repeat right center;	
 }
+
+/*
+section.menu .ascensorLink .wrapper:hover:before{
+	background: url("../images/flecha.png") no-repeat right center;	
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	-o-transform:rotate(90deg);	
+	transform:rotate(90deg);
+}
+*/
 section.menu .ascensorLink h2{
 	color: #FFFFFF;
     font-family: Lato,Times,serif;

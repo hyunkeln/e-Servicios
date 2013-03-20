@@ -3,7 +3,7 @@
 	<div class="section-wrapper"> 
 		<div class="floorHome floorContent">
 <!--<div id="titulos" class="icon_header"><h1></h1></div>-->
-	    	<div class="titulos"><h1>Floor ${descr}</h1> </div>
+	    	<div class="titulos"><h1>Piso ${descr}</h1> </div>
 	    	<div class="left ${cnf.holders.blogCnt}"></div>
 	    	<div class="left ${cnf.holders.prmCnt}"></div>
 	    	<div class="left ${cnf.holders.stdCnt}"></div>
