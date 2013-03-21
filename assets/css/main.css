@@ -303,6 +303,7 @@ section.menu .ascensorLink{
     margin-bottom: 3px;
     /*padding-bottom: 42px;*/
     padding-top: 10px;
+	cursor:pointer;
     width: 565px;
     font-style: normal;
     background: url("../images/iconoShop.png") no-repeat left center;
@@ -1031,9 +1032,11 @@ element.style {
 }
 .sharer div.facebook{
 	margin-right: 15px;
+	cursor:pointer;
 }
 .sharer div.twitter{
 	/*margin-top: -2px;*/
+	cursor:pointer;
 }
 
 /*rollOver effect*/
