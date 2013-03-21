@@ -4,8 +4,6 @@
 
 <div id="detail_base">
 
-<div><h1>${name}</h1> </div>
-
 <div class="thumb_detail left" style="background-image: url('${foto_del_producto}')">
 <div class="prev_btn" onclick="nav.nextStandard(${nid});"><img src="assets/images/big_slide_arrow01.png" /></div>
 </div>
@@ -21,7 +19,7 @@
 <div onclick="scrollToBottom(this, '.scrolldetail')" class="small_button_detail"><img src="assets/images/arrow_down.gif"/></div>
 
 </div>
-<div class="btn_back left" onclick="nav.toFloorHome(this);">Volver al directorio</div>
+<div class="btn_back left" onclick="nav.toFloorHome(this);">Volver al directorio</div><div class="btn_visitar left" onclick="nav.toFloorHome(this);">Volver al directorio</div>
 <div class="sharer left">
 	<div class="sharer-wrp">
 		<div class="facebook left">

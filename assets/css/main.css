@@ -31,7 +31,7 @@ body {
 }
 
 .marginTop{
-	margin-top:75px;
+	margin-top:45px;
 }
 
 ::-moz-selection {
@@ -895,13 +895,13 @@ element.style {
 .desc_detail h2{
 	color:#fff;
 	font-size:18px;
-	padding:0px 10px 0px 20px;
+	padding:0px 10px 0px 12px;
 }
 
 .desc_detail p{
 	color:#fff;
 	font-size:12px;
-	padding:0px 20px 10px 20px;
+	padding:0px 20px 10px 15px;
 }
 
 .next_btn{
@@ -919,16 +919,29 @@ element.style {
 
 .btn_back{
 	background-color:#000;
-	padding:5px;
+	padding:3px 3px 1px 3px;
 	color:#fff;
 	cursor:pointer;
 	font-size:14px;
 	font-weight:700;
-	margin:0px 30px 0px 20px;
-	width:140px;
+	margin:0px 0px 0px 10px;
+	width:150px;
 	text-align:center;
 	
 }
+
+.btn_visitar{
+	background-color:#21A1DC;
+	padding:3px 3px 1px 3px;
+	color:#fff;
+	cursor:pointer;
+	font-size:14px;
+	font-weight:700;
+	width:110px;
+	text-align:center;
+	
+}
+
 
 /*End Detail*/
 .floorContent{
@@ -976,11 +989,11 @@ element.style {
 	padding-top: 30px;
 }
 .floorPremiums ul .premiumProduct {
-    border: 1px solid white;
+    border: 3px solid white;
     float: left;
     list-style: none outside none;
     margin-bottom: 24px;
-    margin-left: 24px;
+    margin-left: 21px;
 }
 
 .columnLightBox_data{
