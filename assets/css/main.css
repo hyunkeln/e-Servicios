@@ -969,7 +969,7 @@ element.style {
 }
 
 .small_button_product{
-   padding-left:350px;
+   padding-left:315px;
 	cursor:pointer;
 }
 
@@ -1010,7 +1010,7 @@ element.style {
 .columnLightBox_image{
 	width:235px;
 	height:297px;
-	padding:0px 20px 0px 0px;
+	padding:0px 10px 0px 0px;
 }
 
 
@@ -1067,6 +1067,7 @@ element.style {
    margin: 2px 0px 0px 21px;
    background-color:#D92323;
    opacity:0;
+	cursor:pointer;
 }
 
 .rollover_detail{
@@ -1081,4 +1082,5 @@ element.style {
    margin: 0px 0px 0px 0px;
    background-color:#D92323;
    opacity:0;
+	cursor:pointer;
 }
