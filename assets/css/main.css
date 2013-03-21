@@ -86,6 +86,10 @@ textarea {
     padding: 0.2em 0;
 }
 
+a,
+a:link{
+	cursor:pointer;
+}
 
 /* ==========================================================================
    Author's custom styles
