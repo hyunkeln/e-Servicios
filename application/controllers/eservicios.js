@@ -246,7 +246,7 @@ function scrollToBottom(object, clase){
 function showRedMask(object){
    $("#mask_"+object).removeClass('redmask');
    $(".redmask").animate({opacity : 0.0},'fast');
-   $("#mask_"+object).animate({opacity : 0.5},'fast');
+   $("#mask_"+object).animate({opacity : 1},'fast');
 }
 function hideRedMask(object){
    $("#mask_"+object).addClass('redmask');

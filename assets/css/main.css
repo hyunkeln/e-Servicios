@@ -404,7 +404,7 @@ nav{
 
 .section-wrapper {
     margin: auto;
-    width: 810px;
+    width: 811px;
     height: 394px;
 }
 #ascensorFloor1 .section-wrapper{
@@ -970,6 +970,7 @@ element.style {
 .floorPremiums {
 	background-color: black;
 	/*background:url(../images/back_box_black.png) repeat transparent;*/
+	border:2px solid black; 
 }
 .floorPremiums ul{
 	padding-top: 30px;
@@ -1057,6 +1058,7 @@ element.style {
 
 .rollover_detail{
    position:absolute;
+	font-family: Lato,Times,serif;
    width:130px;
    height:95px;
    font-size:40px;
