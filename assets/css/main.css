@@ -16,14 +16,15 @@ textarea {
 
 /***Typography***/
 h1, h2, h3 {
-	/*font-family:Arial,Helvetica, sans-serif;*/
-	font-family: Lato,Times,serif;
+	font-family:Arial,Helvetica, sans-serif;
+	/*font-family: Lato,Times,serif;*/
 	font-weight:normal;
 }
 
 body {
-    font-size: 1em;
+    /*font-size: 1em;*/
     line-height: 1.4;
+	font-size:12px;
 }
 
 .marginCenter{
@@ -805,11 +806,11 @@ element.style {
 
 
 .standardsWrp h1{
-	/*font-family:Arial, Helvetica, sans-serif;*/
-	font-family: Lato,Times,serif;
-	color:#000;
+	font-family:Arial, Helvetica, sans-serif;
+	/*font-family: Lato,Times,serif;*/
+	color:#163143;
 	font-weight:100;
-	font-size:30px;
+	font-size:26px;
 	margin:15px 0px 10px 0px;
 	/*margin-top:50px;*/
 }
@@ -893,8 +894,9 @@ element.style {
 }
 
 .desc_detail h2{
+	font-family:Arial, Helvetica, sans-serif;
 	color:#fff;
-	font-size:18px;
+	font-size:14px;
 	padding:0px 10px 0px 12px;
 }
 
@@ -922,24 +924,26 @@ element.style {
 	padding:3px 3px 1px 3px;
 	color:#fff;
 	cursor:pointer;
-	font-size:14px;
+	font-size:12px;
 	font-weight:700;
-	margin:0px 0px 0px 10px;
-	width:150px;
+	margin:15px 0px 0px 10px;
+	width:120px;
 	text-align:center;
 	
 }
 
 .btn_visitar{
-	background-color:#21A1DC;
+	/*background-color:#21A1DC;*/
+	background-color:#52b1c7;
 	padding:3px 3px 1px 3px;
 	color:#fff;
 	cursor:pointer;
-	font-size:14px;
+	font-size:12px;
 	font-weight:700;
-	width:110px;
+	width:80px;
 	text-align:center;
-	
+	text-decoration:none;
+	margin-top:15px;
 }
 
 
