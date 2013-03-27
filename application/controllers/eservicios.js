@@ -24,7 +24,7 @@ var es = {
 	buildHomeParallax:function(){
 		$('section.menu .parallaxWrapper .parallax-layer').parallax({
 				mouseport: $("section.menu")
-			},{}, {xparallax: '100px'});
+			},{}, {xparallax: '500px',yparallax:'100px'}, {xparallax: '100px',yparallax:'500px'}, {xparallax: '600px',yparallax:'500px'}, {xparallax: '850px',yparallax:'300px'});
 
 	},
 	buildParallax:function(tpl,nodes){
