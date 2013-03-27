@@ -1,6 +1,9 @@
 
 {{each items}}
 
+<div style="position:absolute; z-index:99999; top:-30%; left:67%;">
+<img src="${logotipo_marca}" title="T: ${title}">
+</div>
 
 <div id="detail_base">
 
@@ -14,12 +17,12 @@
 
 <div onclick="scrollToTop(this,'.scrolldetail');" class="small_button_detail"><img src="assets/images/arrow_up.gif"/></div>
 <div class="scrolldetail">
-<p>${body}</p>
+<p>{{html body}}</p>
 </div>
 <div onclick="scrollToBottom(this, '.scrolldetail')" class="small_button_detail"><img src="assets/images/arrow_down.gif"/></div>
 
 </div>
-<div class="btn_back left" onMouseOver=this.style.backgroundColor='#FFF',this.style.color='#000'; onMouseOut=this.style.backgroundColor='#000',this.style.color='#FFF'; onclick="nav.toFloorHome(this);">Volver al directorio</div><div class="btn_visitar left" onMouseOver=this.style.backgroundColor='#FFF',this.style.color='#52b1c7'; onMouseOut=this.style.backgroundColor='#52b1c7',this.style.color='#FFF'; onclick="nav.toFloorHome(this);">Visitar Site</div>
+<div class="btn_back left" onMouseOver=this.style.backgroundColor='#FFF',this.style.color='#000'; onMouseOut=this.style.backgroundColor='#000',this.style.color='#FFF'; onclick="nav.toFloorHome(this);">Volver al directorio</div><div class="btn_visitar left" onMouseOver=this.style.backgroundColor='#FFF',this.style.color='#52b1c7'; onMouseOut=this.style.backgroundColor='#52b1c7',this.style.color='#FFF'; onclick="window.open('${link}','_blank');" target="_blank">Visitar Site</div>
 <div class="sharer left">
 	<div class="sharer-wrp">
 		<div class="facebook left">
