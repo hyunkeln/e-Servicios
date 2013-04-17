@@ -628,7 +628,8 @@ element.style {
 }
 
 .blogContent article p{
-	padding:0px 15px 10px 10px;
+	padding:0px 15px 2px 10px;
+	margin: 0;
 }
 
 .blogBody{
@@ -678,6 +679,7 @@ element.style {
 	color: white;
 	margin-left: 10px;
 	height: 64px;
+	height: 167px;
 }
 
 .prmObj img {
@@ -710,7 +712,7 @@ element.style {
 }
 
 .scrollcontent{
-   height:51px;
+   height:151px;
    overflow:hidden;
 }
 .stdContent.only .scrollcontent{
@@ -830,6 +832,7 @@ element.style {
 .prmContent{
 	width: 385px;
 	height: 244px;
+	height: 140px;
 	overflow: hidden;
 	background:url(../images/back_box_black.png) transparent;
 	border:5px solid black;
