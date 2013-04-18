@@ -355,7 +355,7 @@ section.menu .ascensorLink .span, section.menu .ascensorLink h2{
     padding: 0 60px;
     position: relative;
     top: -25px;
-    width: 605px;
+    width: 635px;
 }
 #menu-top li {
     background: none repeat scroll 0 0 #000000;
@@ -365,29 +365,30 @@ section.menu .ascensorLink .span, section.menu .ascensorLink h2{
     height: 70px;
     list-style: none outside none;
     text-indent: -1e+8px;
-    width: 150px;
+    width: 114px;
     
 }
 #menu-top li.home{
-    background: url("../images/navii.png") no-repeat scroll 7px 3px transparent;
+    background: url("../images/navii.png") no-repeat scroll 56px 0px transparent;
+    width: 259px;
 }
 #menu-top li.eBanca:hover, #menu-top li.eBanca.ascensorLinkActive {
-    background: url("../images/navii.png") no-repeat scroll -243px -274px transparent;
+    background: url("../images/navii.png") no-repeat scroll -257px -274px transparent;
 }
 #menu-top li.eBanca {
-    background: url("../images/navii.png") no-repeat scroll 1px -278px transparent;
+    background: url("../images/navii.png") no-repeat scroll -14px -280px transparent;
 }
 #menu-top li.eGobierno:hover, #menu-top li.eGobierno.ascensorLinkActive {
-    background: url("../images/navii.png") no-repeat scroll -243px -133px transparent;
+    background: url("../images/navii.png") no-repeat scroll -261px -133px transparent;
 }
 #menu-top li.eGobierno {
-    background: url("../images/navii.png") no-repeat scroll 2px -137px transparent;
+    background: url("../images/navii.png") no-repeat scroll -19px -138px transparent;
 }
 #menu-top li.eShopping:hover, #menu-top li.eShopping.ascensorLinkActive {
-    background: url("../images/navii.png") no-repeat scroll -243px -414px transparent;
+    background: url("../images/navii.png") no-repeat scroll -261px -415px transparent;
 }
 #menu-top li.eShopping {
-    background: url("../images/navii.png") no-repeat scroll 3px -420px transparent;
+    background: url("../images/navii.png") no-repeat scroll -18px -423px transparent;
 }
 nav{
 	display: none;
@@ -721,7 +722,7 @@ element.style {
    overflow:hidden;
 }
 .stdContent.only .scrollcontent{
-	height: 150px;
+	height: 190px;
 }
 
 
@@ -1104,4 +1105,16 @@ element.style {
    background-color:#D92323;
    opacity:0;
 	cursor:pointer;
+}
+
+.std-logo-container{
+	height: 0px;
+	z-index:99999; 
+	margin:auto;
+	width: 778px;
+	text-align: right;
+}
+.std-logo-container img{
+	position: relative;
+	top: -89px;
 }

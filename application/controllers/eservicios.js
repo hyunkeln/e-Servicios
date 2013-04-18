@@ -24,7 +24,7 @@ var es = {
 	buildHomeParallax:function(){
 		$('section.menu .parallaxWrapper .parallax-layer').parallax({
 				mouseport: $("section.menu")
-			}, {xparallax: '100px',yparallax:'50px'}, {xparallax: '500px',yparallax:'50px'}, {xparallax: '720px',yparallax:'50px'}, {xparallax: '1000px',yparallax:'50px'});
+			}, {xparallax: '1000px',yparallax:'50px'}, {xparallax: '700px',yparallax:'50px'}, {xparallax: '400px',yparallax:'50px'}, {xparallax: '100px',yparallax:'50px'});
 
 	},
 	buildParallax:function(tpl,nodes){
