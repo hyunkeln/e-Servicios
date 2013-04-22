@@ -1,49 +1,46 @@
-
 {{each items}}
 
 <div class="std-logo-container">
-<img src="${logotipo_marca}" width="150" title="${title}">
+	<img src="${logotipo_marca}" width="150" title="${title}">
 </div>
 
 <div id="detail_base">
-<div class="prev_btn" onclick="nav.nextStandard(${nid});"><img src="assets/images/big_slide_arrow01.png" /></div>
-<div class="thumb_detail left" style="background-images: url('${foto_del_producto}')">
-<img class="back" src="${foto_del_producto}">
-
-</div>
-
-<div class="desc_detail left">
-<div class="marginTop">
-<h2>${title}</h2>
-
-<div onclick="scrollToTop(this,'.scrolldetail');" class="small_button_detail"><img src="assets/images/arrow_up.gif"/></div>
-<div class="scrolldetail">
-<p>{{html body}}</p>
-</div>
-<div onclick="scrollToBottom(this, '.scrolldetail')" class="small_button_detail"><img src="assets/images/arrow_down.gif"/></div>
-
-</div>
-<div class="btn_back left" onMouseOver=this.style.backgroundColor='#FFF',this.style.color='#000'; onMouseOut=this.style.backgroundColor='#000',this.style.color='#FFF'; onclick="nav.toFloorHome(this);">Volver al directorio</div><div class="btn_visitar left" onMouseOver=this.style.backgroundColor='#FFF',this.style.color='#52b1c7'; onMouseOut=this.style.backgroundColor='#52b1c7',this.style.color='#FFF'; onclick="window.open('${link}','_blank');" target="_blank">Ir al sitio</div>
-<div class="sharer left">
-	<div class="sharer-wrp">
-		<div class="facebook left">
-			<img src="assets/images/facebook-c.png" onclick="share.fb.item('${title}',top.location.protocol+'//'+top.location.host+top.location.pathname+'?nid=${$nid}'+top.location.hash,'${foto_del_producto}','e-Servicios','${teaser}');"/>
-		</div>
-		<div class="twitter left">
-			<img src="assets/images/twittear.png" onclick="share.tw.item('${title}',top.location.protocol+'//'+top.location.host+top.location.pathname+'?nid=${$nid}'+top.location.hash);"/>
-		</div>
-		<div class="clear">
-		</div>
+	<!-- <div class="img-element img-element-left left"><img src="assets/images/parallax/lampara.png" style="width:100px; height:100%"/></div> -->
+	<div class="prev_btn" onclick="nav.nextStandard(${nid});"><img src="assets/images/big_slide_arrow01.png" /></div>
+		<div class="thumb_detail left" style="background-images: url('${foto_del_producto}')">
+		<img class="back" src="${foto_del_producto}">
 	</div>
+
+	<div class="desc_detail left">
+		<div class="marginTop">
+			<h2>${title}</h2>
+		
+			<div onclick="scrollToTop(this,'.scrolldetail');" class="small_button_detail"><img src="assets/images/arrow_up.gif"/></div>
+			<div class="scrolldetail">
+				<p>{{html body}}</p>
+			</div>
+			<div onclick="scrollToBottom(this, '.scrolldetail')" class="small_button_detail"><img src="assets/images/arrow_down.gif"/></div>
+	
+		</div>
+		<div class="btn_back left" onMouseOver=this.style.backgroundColor='#FFF',this.style.color='#000'; onMouseOut=this.style.backgroundColor='#000',this.style.color='#FFF'; onclick="nav.toFloorHome(this);">Volver al directorio</div><div class="btn_visitar left" onMouseOver=this.style.backgroundColor='#FFF',this.style.color='#52b1c7'; onMouseOut=this.style.backgroundColor='#52b1c7',this.style.color='#FFF'; onclick="window.open('${link}','_blank');" target="_blank">Ir al sitio</div>
+		<div class="sharer left">
+				<div class="sharer-wrp">
+					<div class="facebook left">
+						<img src="assets/images/facebook-c.png" onclick="share.fb.item('${title}',top.location.protocol+'//'+top.location.host+top.location.pathname+'?nid=${$nid}'+top.location.hash,'${foto_del_producto}','e-Servicios','${teaser}');"/>
+					</div>
+					<div class="twitter left">
+						<img src="assets/images/twittear.png" onclick="share.tw.item('${title}',top.location.protocol+'//'+top.location.host+top.location.pathname+'?nid=${$nid}'+top.location.hash);"/>
+					</div>
+					<div class="clear">
+					</div>
+				</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="next_btn" onclick="nav.nextStandard(${nid},false);"><img src="assets/images/big_slide_arrow02.png" /></div>
+	<!-- <div class="img-element img-element-left" style="height:100%;"><img src="assets/images/parallax/maceta.png" style="width:100px; height:100%"/></div> -->
 </div>
+
 <div class="clear"></div>
-</div>
 
-
-<div class="next_btn" onclick="nav.nextStandard(${nid},false);"><img src="assets/images/big_slide_arrow02.png" /></div>
-</div>
-
-<div class="clear"></div>
-
-{{/each}} 
-
+{{/each}}

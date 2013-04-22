@@ -408,7 +408,7 @@ nav{
     margin: auto;
     width: 820px;
     height: 394px;
-    margin-bottom: 7px;
+    margin-bottom: 37px;
 }
 #ascensorFloor1 .section-wrapper{
 	width: 580px;
@@ -607,7 +607,7 @@ element.style {
 /*BLOG*/
 .blogContent{
 	width: 395px;
-	height: 307px;
+	height: 347px;
 	overflow: hidden;
 	background:url(../images/back_box_slide.png) transparent;
 	border:5px solid white;
@@ -626,11 +626,15 @@ element.style {
 
 .blogContent article{
 	width: 395px;
-
-	height: 164px;
+	position: relative;
+	height: 185px;
 	overflow: hidden;
 	background:#000;
 	background:url(../images/back_box_text_black.png) transparent;
+}
+.blogContent .blog-image{
+	position: absolute;
+	height: 350px;
 }
 
 .blogContent article p{
@@ -685,7 +689,7 @@ element.style {
 	color: white;
 	margin-left: 10px;
 	height: 64px;
-	height: 167px;
+	height: 207px;
 }
 
 .prmObj img {
@@ -702,7 +706,7 @@ element.style {
 }
 
 .stdContent.only{
-	height: 307px;
+	height: 347px;
 }
 .standardsWrp h1{
 	display: none;
@@ -718,11 +722,11 @@ element.style {
 }
 
 .scrollcontent{
-   height:151px;
+   height:190px;
    overflow:hidden;
 }
 .stdContent.only .scrollcontent{
-	height: 190px;
+	height: 251px;
 }
 
 
@@ -883,17 +887,18 @@ element.style {
 /*Detail Standard*/
 
 #detail_base{
+	width: 1054px;
 	width:880px;
 	height:334px;
 	margin:0 auto;
-	padding:0px 0px 0px 45px;
+	padding:0px 0px 0px 0px;
+	
 }
 
 .thumb_detail{
 	width:254px;
 	margin-right: 15px;
 	height:334px;
-	background:url(../images/stock_photo.jpg) no-repeat transparent;
 	padding-right:20px;
 	position: relative;
 	overflow: hidden;
