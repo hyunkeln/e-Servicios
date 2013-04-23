@@ -106,7 +106,7 @@ var es = {
 		.done(function(content,tpl){
 			if(empty) $(holder).empty();
 			$.tmpl(tpl[0] , content[0]).appendTo(holder);
-		$(holder).fadeIn();
+			$(holder).fadeIn();
 			if(typeof func!=="undefined") if(func!=null) func();
 		})
 		.fail(function(a,b,c){
@@ -140,6 +140,7 @@ var es = {
 			$(holder).animate({left:width});
 		else if(dir==1)
 			$(holder).animate({left:-width});		
+			
 		if(nav.isHomeVisible(floorName)){
 			nav.floorToStandard(floorName);
 			shouldAnimate = false;
@@ -211,20 +212,21 @@ nav = {
 		var multiplier = 3;
 		if(toLeft) multiplier*=-1;
 		var bounce = 0;
+		var duration = 500;
 		$(holder).animate({
 			left:multiplier*parseInt($(holder).css("width"))},
-			{duration:500,
+			{duration:duration,
 			complete:function(){
 				if(bounce==0){ //Como hay 3 objetos con la clase floorContent, hay que impedir el 'rebote'
 					bounce = 1;
 					$(holder).fadeOut().addClass("hide");
 					//var holder2 = $('.floor.'+clearString(floorName)).find(".floorHome");		
-					if(toLeft) $(holder2).animate({left:"-"+$(holder2).css("left").replace("-","").replace("px","")},{duration:1});
-					else $(holder2).animate({left:$(holder2).css("left").replace("-","").replace("px","")},{duration:1});
+					if(toLeft) $(holder2).animate({left:$(holder2).css("left").replace("-","").replace("px","")},{duration:1});
+					else $(holder2).animate({left:"-1"+$(holder2).css("left").replace("-","").replace("px","")},{duration:1});
 					$(holder2).fadeIn().removeClass("hide");
 					$(holder2).animate({
 						left:0},
-						{duration:500,
+						{duration:duration,
 						complete:function(){
 							$(holder2).animate({left:0});
 							if (callback && typeof(callback) === "function") callback.call();
@@ -236,7 +238,7 @@ nav = {
 	},
 	toFloorHome:function(obj){
 		var floorName = $(obj).parents("section").attr("name");
-		nav.animateInOut($('.floor.'+clearString(floorName)).find(".floorContent"),$('.floor.'+clearString(floorName)).find(".floorHome"),null,function(){
+		nav.animateInOut($('.floor.'+clearString(floorName)).find(".floorContent"),$('.floor.'+clearString(floorName)).find(".floorHome"),false,function(){
 			$('.floor.'+clearString(floorName)+" .sharer-floor").fadeIn("slow");
 		});
 		
@@ -245,7 +247,7 @@ nav = {
 	},
 	floorTo:function(floorName,container){
 		//var holder = $('.floor.'+clearString(floorName)).find(".floorContent");
-		nav.animateInOut($('.floor.'+clearString(floorName)).find(".floorContent"),$('.floor.'+clearString(floorName)).find(container));
+		nav.animateInOut($('.floor.'+clearString(floorName)).find(".floorContent"),$('.floor.'+clearString(floorName)).find(container),true);
 		//$('.floor.'+clearString(floorName)).find(".floorContent").fadeOut().addClass("hide");
 		//$('.floor.'+clearString(floorName)).find(container).fadeIn().removeClass("hide");
 	},

@@ -521,7 +521,7 @@ section article{
 #ascensorFloor2 .section-wrapper{
 	padding-top:78px;
 	background:url(../images/iconoBanca.png) no-repeat transparent;
-	background-position: -8px 76px;
+	background-position: -1px 82px;
 }
 
 #ascensorFloor3 .section-wrapper{
@@ -548,6 +548,10 @@ section article{
 	    text-shadow: 0 1px 1px black;
 	    margin: 0;
 		margin-left:60px;
+}
+.titulos-eBanca h1{
+	color: #163143;
+	text-shadow: 0 0px 0px transparent;
 }
 
 .icon_header{

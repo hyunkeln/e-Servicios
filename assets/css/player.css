@@ -1,1 +1,28 @@
-#audio_player_holder{color:#FFFFFF;left:0;position:absolute;top:220px;z-index:9000}#audio_controls #play_button{background-position:0 -104px}#audio_controls #play_button:hover{background-position:0 -156px}#audio_controls #pause_button{background-position:0 0}#audio_controls #pause_button:hover{background-position:0 -52px}#audio_controls div{background-image:url("../images/audioplayer.png");height:50px;width:78px;cursor:pointer}.player_hide{display:none}.player_show{display:inline-block}
+#audio_player_holder{
+color:#FFFFFF;
+left:0;
+position:absolute;
+top:220px;
+z-index:9000}
+#audio_controls #play_button{
+background-position:0 -76px}
+#audio_controls #play_button:hover{
+background-position:0 -113px}
+#audio_controls #pause_button{
+background-position:0 0}
+#audio_controls #pause_button:hover{
+background-position:0 -38px}
+#audio_controls div{
+background-image:url("../images/audioplayer.png");
+height:37px;
+width:58px;
+cursor:pointer}
+.player_hide{
+display:none}
+.player_show{
+display:inline-block}
+
+
+
+
+
