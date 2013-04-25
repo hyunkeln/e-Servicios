@@ -1058,6 +1058,7 @@ element.style {
     margin: auto;
     padding-top: 4px;
     width: 819px;
+    display: none;
 }
 #ascensorFloor1 .sharer{
 	width: 412px;
