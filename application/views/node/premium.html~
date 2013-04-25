@@ -1,0 +1,20 @@
+<!--<ul>
+{{each items}}
+<li class="premiumProduct product${nid}" onclick="es.loadPremiumProduct(${nid});">
+	<img src="${image}" title="${title}">
+</li>
+{{/each}} 
+</ul>
+<div class="btn_back" onclick="nav.toFloorHome(this);">Volver al directorio</div>
+-->
+<ul>
+{{each items}}
+<li class="premiumProduct product${nid}" onclick="es.loadPremiumProduct(${nid});" onmouseover="showRedMask(${nid});" onmouseout="hideRedMask(${nid});">
+   <div id="mask_${nid}" class="rollover_detail redmask">+</div>
+   <img src="${image}" title="T: ${title}">
+</li>
+{{/each}}
+</ul>
+<div class="btn_back" onclick="nav.toFloorHome(this);">Volvers∫ al directorio</div>
+<!-- <div onclick="nav.nextStandard(${nid});">Next</div>
+<div onclick="nav.nextStandard(${nid},false);">Prev</div> -->
