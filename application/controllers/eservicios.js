@@ -130,7 +130,7 @@ var es = {
 		
 	},
 	loadStandard:function(nid,dir){
-		trackPage("standards/"+nid+top.location.hash);
+		trackPage("standards/"+nid+self.location.hash);
 		if(typeof dir==="undefined") dir=0;
 		var floorName = $(".nid"+nid).parents("section").attr("name");
 		var holder  = '.floor.'+clearString(floorName)+" .floorStandards";
@@ -158,7 +158,7 @@ var es = {
 		},dir==0);
 	},
 	loadPremium:function(nid){
-		trackPage("premiums/"+nid+top.location.hash);
+		trackPage("premiums/"+nid+self.location.hash);
 		var floorName = $(".nid"+nid).parents("section").attr("name");
 		var holder  = '.floor.'+clearString(floorName)+" .floorPremiums";
 		if(nav.isHomeVisible(floorName))
@@ -166,7 +166,7 @@ var es = {
 		es.renderServiceTemplateToHolder(cnf.services.products+nid,cnf.views.premiumNd,holder,true,null,true);
 	}, 
 	loadPremiumProduct:function(nid){
-		trackPage("premiumProduct/"+nid+top.location.hash);
+		trackPage("premiumProduct/"+nid+self.location.hash);
 		var holder = "#nodeContent";
 		es.renderServiceTemplateToHolder(cnf.services.node+nid,cnf.views.premiumProductNd,holder,true,function(){
 			$(holder).modal();
@@ -187,7 +187,7 @@ nav = {
 		return !$('.floor.'+clearString(floorName)).find(".floorHome").hasClass("hide");
 	},
 	nextStandard:function(nid,right){
-		//trackPage("standards/"+nid+top.location.hash);
+		//trackPage("standards/"+nid+self.location.hash);
 		//console.log(nid);
 		if(typeof right==="undefined") right=true;
 		var objs = $(".nid"+nid).parent().find(".stdObj").each(function(index){

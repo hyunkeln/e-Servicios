@@ -1,6 +1,0 @@
-http://www.jquery4u.com/demos/jquery4u-parallax-demo/
-http://srobbin.com/jquery-plugins/backstretch/
-http://kirkas.ch/ascensor/#/CSS
-
-
-http://www.cameronmcefee.com/plax-demo/
