@@ -16,9 +16,9 @@ var es = {
 				
 				
 		}).fail(function(a,b,c){
-			console.log(a);
-			console.log(b);
-			console.log(c);
+			//console.log(a);
+			//console.log(b);
+			//console.log(c);
 		});
 	}, 
 	buildHomeParallax:function(){
@@ -30,12 +30,12 @@ var es = {
 	buildParallax:function(tpl,nodes){
 		return 0;
 		for(var i=0;i<nodes.length;i++){
-			//console.log("section."+clearString(nodes[i].name));
+			////console.log("section."+clearString(nodes[i].name));
 			$.tmpl(tpl,nodes[i]).prependTo("section."+clearString(nodes[i].name));
 			$("section."+clearString(nodes[i].name)+' .parallaxWrapper .parallax-layer').parallax({
 				mouseport: $("section."+clearString(nodes[i].name))
 			},{}, {xparallax: '100px'});
-			//console.log($("section."+clearString(nodes[i].name)).html());
+			////console.log($("section."+clearString(nodes[i].name)).html());
 		}
 		
 		//
@@ -44,7 +44,7 @@ var es = {
 		$.when( $.get(cnf.views.floorVw,function(){}, 'html'),
 			 	$.get(cnf.views.parallaxVw,function(){}, 'html'))
 		.done(function(floortpl,parallaxtpl){
-		//console.log(parallaxtpl);
+		////console.log(parallaxtpl);
 			var ascNames = "Home";
 			var hash = "";
 			if(firstLoad)
@@ -75,9 +75,9 @@ var es = {
 				firstLoad = false;
 			}
 		}).fail(function(a,b,c){
-			console.log(a);
-			console.log(b);
-			console.log(c);
+			//console.log(a);
+			//console.log(b);
+			//console.log(c);
 		});
 	},
 	renderFloor:function(floorName){
@@ -110,9 +110,9 @@ var es = {
 			if(typeof func!=="undefined") if(func!=null) func();
 		})
 		.fail(function(a,b,c){
-			console.log(a);
-			console.log(b);
-			console.log(c);
+			//console.log(a);
+			//console.log(b);
+			//console.log(c);
 		});
 	},
 	menuChange:function(item){
@@ -144,7 +144,7 @@ var es = {
 		if(nav.isHomeVisible(floorName)){
 			nav.floorToStandard(floorName);
 			shouldAnimate = false;
-			console.log("Visible el home");
+			//console.log("Visible el home");
 		}
 		es.renderServiceTemplateToHolder(cnf.services.node+nid,cnf.views.standardNd,holder,true,function(){
 			if(shouldAnimate) 
@@ -188,7 +188,7 @@ nav = {
 	},
 	nextStandard:function(nid,right){
 		//trackPage("standards/"+nid+self.location.hash);
-		//console.log(nid);
+		////console.log(nid);
 		if(typeof right==="undefined") right=true;
 		var objs = $(".nid"+nid).parent().find(".stdObj").each(function(index){
 			if($(this).hasClass("nid"+nid)){
@@ -199,13 +199,13 @@ nav = {
 				}
 				else {
 					if($(".nid"+nid).attr("class")==$(".nid"+nid).parent().find(".stdObj").first().attr("class")) click = $(".nid"+nid).parent().find(".stdObj").last().attr("onclick");
-					else click = $(this).prev().attr("onclick");//console.log($(this).prev().attr("class"));
+					else click = $(this).prev().attr("onclick");////console.log($(this).prev().attr("class"));
 					click = click.replace(")",",-1)");
 				}
 				eval(click);
 			}
 		});
-		//console.log(objs);
+		////console.log(objs);
 	}, 
 	animateInOut:function(holder,holder2,toLeft,callback){
 		if(typeof toLeft==="undefined") toLeft=true;

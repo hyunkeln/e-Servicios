@@ -64,5 +64,5 @@ $(function() {
 
 
 function trackPage(call){
-	console.log("Track page: " + call);
+	//console.log("Track page: " + call);
 }
